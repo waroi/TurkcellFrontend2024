@@ -11880,7 +11880,7 @@ header {
   header .navbar .navbar-items {
     flex-direction: column;
     position: fixed;
-    top: 60px;
+    top: 87px;
     height: 0;
     visibility: hidden;
     left: 0;
@@ -11924,20 +11924,17 @@ header {
   width: 100%;
 }
 
-#products .container .row .best-price {
+#products .container .best-price {
   top: -32px;
   right: -30px;
+  visibility: hidden;
 }
-#products .container .card-bottom {
-  width: 100%;
+#products .container:has(.card-best-price:hover) .best-price {
+  visibility: visible;
 }
 
 #aboutUs {
   margin-top: 12rem;
-}
-#aboutUs .about-us-img {
-  background-image: url(https://www.foodformzansi.co.za/wp-content/uploads/2020/09/chickens.jpg);
-  background-size: cover;
 }
 
 #writing {
@@ -11952,6 +11949,18 @@ header {
 }
 
 #product-1 {
+  margin: 10rem 0;
+}
+
+#questions {
+  margin: 11rem 0;
+}
+
+.products-margin {
+  margin: 10rem 0;
+}
+
+.brdcrmb {
   margin: 10rem 0;
 }
 
