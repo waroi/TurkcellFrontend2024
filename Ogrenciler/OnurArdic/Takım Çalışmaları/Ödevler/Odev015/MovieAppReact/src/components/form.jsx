@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from 'react'
 
 const Form = ({ addMovie, movieToEdit, onEdit }) => {
