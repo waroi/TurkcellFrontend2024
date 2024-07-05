@@ -1,5 +1,9 @@
 {
-  "Index": {
+  "HomePage": {
     "title": "Selam!"
+  },
+
+  "Deneme": {
+    "title": "Deneme Sayfasi"
   }
 }

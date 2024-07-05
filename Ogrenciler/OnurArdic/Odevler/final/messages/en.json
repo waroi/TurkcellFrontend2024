@@ -1,5 +1,8 @@
 {
-  "Index": {
+  "HomePage": {
     "title": "Hello world!"
+  },
+  "Deneme": {
+    "title": "i dont speak english"
   }
 }
