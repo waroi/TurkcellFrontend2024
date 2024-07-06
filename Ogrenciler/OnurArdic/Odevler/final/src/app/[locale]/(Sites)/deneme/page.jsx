@@ -4,6 +4,7 @@ const page = () => {
   const t = useTranslations('Deneme')
   return (
     <div>
+      <h1>About</h1>
       <h1>{t('title')}</h1>
     </div>
   )
