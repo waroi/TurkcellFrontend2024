@@ -21,5 +21,10 @@
     "HeroProductsText": "Yüksek Kalite Ürün",
     "HeroCountCustomers": "30.000+",
     "HeroCustomersText": "Mutlu Müşteri"
+  },
+
+  "HomePage": {
+    "ArrivalsTitle": "Yeni Çıkanlar",
+    "TopSellingTitle": "Çok Satanlar"
   }
 }

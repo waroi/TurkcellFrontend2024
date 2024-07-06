@@ -21,5 +21,10 @@
     "HeroProductsText": "High-Quality Products",
     "HeroCountCustomers": "30.000+",
     "HeroCustomersText": "Happy Customers"
+  },
+
+  "HomePage": {
+    "ArrivalsTitle": "NEW ARRİVALS",
+    "TopSellingTitle": "TOP SELLING"
   }
 }

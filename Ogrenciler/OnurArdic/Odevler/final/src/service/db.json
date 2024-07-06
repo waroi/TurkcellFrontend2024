@@ -1,0 +1,72 @@
+{
+  "arrival": [
+    {
+      "id": "1",
+      "title": "T-SHIRT WITH TAPE DETAILS",
+      "stars": 4,
+      "price": "120",
+      "img": "public/products/arrival00.png"
+    },
+    {
+      "id": "2",
+      "title": "SKINNY FIT JEANS",
+      "stars": 5,
+      "price": "240",
+      "oldprice": "260",
+      "discount": "20%",
+      "img": "public/products/arrival01.png"
+    },
+    {
+      "id": "3",
+      "title": "CHECKERED SHIRT",
+      "stars": 3,
+      "price": "180",
+      "img": "public/products/arrival02.png"
+    },
+    {
+      "id": "4",
+      "title": "SLEEVE STRIPED T-SHIRT",
+      "stars": 3,
+      "price": "130",
+      "oldprice": "160",
+      "discount": "30%",
+      "img": "public/products/arrival03.png"
+    }
+  ],
+  "topSelling": [
+    {
+      "id": "5",
+      "title": "VERTICAL STRIPED SHIRT",
+      "stars": 5,
+      "price": "212",
+      "oldprice": "252",
+      "discount": "20%",
+      "img": "public/products/tTopSelling/selling00.png"
+    },
+    {
+      "id": "6",
+      "title": "COURAGE GRAPHIC T-SHIRT",
+      "stars": 3,
+      "price": "145",
+
+      "img": "public/products/tTopSelling/selling01.png"
+    },
+    {
+      "id": "7",
+      "title": "LOOSE FIT BERMUDA SHORTS",
+      "stars": 4,
+      "price": "80",
+      "img": "public/products/tTopSelling/selling02.png"
+    },
+    {
+      "id": "8",
+      "title": "FADED SKINNY JEANS",
+      "stars": 5,
+      "price": "210",
+      "img": "public/products/tTopSelling/selling03.png"
+    }
+  ],
+  "Comments": {
+    "name": "typicode"
+  }
+}
