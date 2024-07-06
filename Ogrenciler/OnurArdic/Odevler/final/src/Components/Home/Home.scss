@@ -45,19 +45,12 @@
       @include typography('Integral CF Regular', 32px, 400, uppercase, 1px);
       color: #fff;
       text-decoration: none;
-
-      a {
-        color: #000;
-      }
     }
   }
 
   .navbar-links {
     @extend .navbar-wrapper;
     gap: 24px;
-    a {
-      color: #000;
-    }
   }
 
   .navbar-search {

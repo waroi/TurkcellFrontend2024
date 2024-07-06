@@ -8,6 +8,7 @@ import { setLocale } from '../../../app/lib/features/localeslice'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import '../Home.scss'
+import ThemeButton from '@/Components/ui/ThemeButton'
 
 const Header = () => {
   const router = useRouter()
@@ -74,6 +75,8 @@ const Header = () => {
             <option value="tr">TR</option>
             <option value="en">EN</option>
           </select>
+
+          <ThemeButton />
         </div>
       </div>
     </nav>

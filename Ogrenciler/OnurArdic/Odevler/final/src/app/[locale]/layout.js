@@ -1,10 +1,9 @@
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
-
-import './globals.scss'
-import StoreProvider from '../storeprovider'
 import Header from '@/Components/Home/Navbar/Header'
-import Hero from '@/Components/Home/Hero/Hero'
+import StoreProvider from '../storeprovider'
+import ClientWrapper from './ClientWrapper'
+import './globals.scss'
 
 export const metadata = {
   title: 'SHOP.CO',
@@ -13,13 +12,16 @@ export const metadata = {
 
 export default async function RootLayout({ children, params: { locale } }) {
   const messages = await getMessages(locale)
+
   return (
     <html lang={locale}>
       <body>
         <NextIntlClientProvider messages={messages}>
           <StoreProvider>
-            <Header />
-            {children}
+            <ClientWrapper>
+              <Header />
+              {children}
+            </ClientWrapper>
           </StoreProvider>
         </NextIntlClientProvider>
       </body>
