@@ -1,0 +1,61 @@
+@import '../Home.scss';
+
+header {
+  @include typography('Satoshi', 14px, normal);
+  background: #f2f0f1;
+
+  .hero-wrapper {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    align-items: center;
+
+    .hero-left {
+      .hero-left-content {
+        h1 {
+          @include typography('Integral CF Regular', 64px, 400, uppercase, 3px);
+        }
+
+        p {
+          @include typography('Satoshi', 16px, lowercase, 22px);
+          opacity: 0.5;
+          margin: 10px 0;
+        }
+
+        a {
+          display: inline-block;
+          margin-top: 10px;
+          background-color: #000;
+          color: #fff;
+          padding: 16px 54px 16px 54px;
+          border-radius: 54px;
+        }
+      }
+
+      .statistics {
+        margin-top: 20px;
+        @include flexible(flex, space-between, center);
+
+        .staticks-content {
+          h4 {
+            @include typography('Satoshi', 40px, 600, uppercase, 1px);
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .hero-right {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.brands {
+  background-color: #000;
+  .brands-wrapper {
+    @include flexible(flex, space-between, center);
+    @include padding(40px 0px);
+  }
+}

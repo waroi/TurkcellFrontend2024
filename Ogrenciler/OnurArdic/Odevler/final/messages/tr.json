@@ -1,9 +1,25 @@
 {
-  "HomePage": {
-    "title": "Selam!"
+  "Navbar": {
+    "NavbarTopTitle": "Kayıt ol ve %20 indirim fırsatını kaçırma!",
+    "NavbarLogo": "SHOP.CO",
+    "LinkShop": "Alışveriş",
+    "LinkOnSale": "İndirimdekiler",
+    "LinkArrivals": "Yeni Gelenler",
+    "Brands": "Markalar",
+    "Search": "Ürünleri Ara...",
+    "Login": "Giriş",
+    "Sign": "Kayıt Ol"
   },
 
-  "Deneme": {
-    "title": "Deneme Sayfasi"
+  "Hero": {
+    "HeroBigTitle": "TARZINA UYGUN KIYAFETİ BUL",
+    "HeroSmallTitle": "Bireyselliğinizi ortaya çıkarmak ve stil anlayışınıza hitap etmek için tasarlanmış, titizlikle hazırlanmış çeşitli giysi yelpazemize göz atın.",
+    "HeroButton": "Alışverişe Başla",
+    "HeroCountBrands": "200+",
+    "HeroBrandsText": "Uluslararası Marka",
+    "HeroCountProducts": "2.000+",
+    "HeroProductsText": "Yüksek Kalite Ürün",
+    "HeroCountCustomers": "30.000+",
+    "HeroCustomersText": "Mutlu Müşteri"
   }
 }

@@ -1,8 +1,25 @@
 {
-  "HomePage": {
-    "title": "Hello world!"
+  "Navbar": {
+    "NavbarTopTitle": "Sign up and get 20% off to your first order. Sign Up Now!",
+    "NavbarLogo": "SHOP.CO",
+    "LinkShop": "Shop",
+    "LinkOnSale": "On Sale",
+    "LinkArrivals": "New Arrivals",
+    "Brands": "Brands",
+    "Search": "Search for products...",
+    "Login ": "Login",
+    "Sign": "Sign up"
   },
-  "Deneme": {
-    "title": "i dont speak english"
+
+  "Hero": {
+    "HeroBigTitle": "FIND CLOTHES THAT MATCHES YOUR STYLE",
+    "HeroSmallTitle": "Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.",
+    "HeroButton": "Shop Now",
+    "HeroCountBrands": "200+",
+    "HeroBrandsText": "International Brands",
+    "HeroCountProducts": "2.000+",
+    "HeroProductsText": "High-Quality Products",
+    "HeroCountCustomers": "30.000+",
+    "HeroCustomersText": "Happy Customers"
   }
 }

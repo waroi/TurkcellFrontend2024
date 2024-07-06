@@ -1,0 +1,98 @@
+@mixin flexible($display, $justify: null, $align: null, $gap: null) {
+  display: $display;
+  justify-content: if($justify != null, $justify, 'flex-start');
+  align-items: if($align != null, $align, 'stretch');
+  gap: if($gap != null, $gap, '0');
+}
+
+@mixin typography(
+  $font-family: 'Satoshi',
+  $font-size,
+  $font-weight: normal,
+  $text-transform: none,
+  $letter-spacing: normal
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  text-transform: $text-transform;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin colors($color, $background-color: null) {
+  color: $color;
+  background-color: if($background-color != null, $background-color, 'transparent');
+}
+
+@mixin padding($padding) {
+  padding: $padding;
+}
+
+.navbar {
+  @include typography('Satoshi', 14px, normal);
+
+  .navbar-top {
+    @include colors(#fff, #000);
+    @include padding(10px 0);
+    text-align: center;
+  }
+
+  .navbar-wrapper {
+    @include flexible(flex, space-between, center);
+    @include padding(10px 0);
+
+    .logo {
+      @include typography('Integral CF Regular', 32px, 400, uppercase, 1px);
+      color: #fff;
+      text-decoration: none;
+
+      a {
+        color: #000;
+      }
+    }
+  }
+
+  .navbar-links {
+    @extend .navbar-wrapper;
+    gap: 24px;
+    a {
+      color: #000;
+    }
+  }
+
+  .navbar-search {
+    position: relative;
+    input {
+      padding: 10px 30px;
+      width: 450px;
+      background-color: #f0f0f0;
+      border: none;
+      border-radius: 30px;
+      outline: none;
+    }
+
+    i {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      font-size: 17px;
+    }
+  }
+
+  .buttons-wrapper {
+    @include flexible(flex, center);
+    gap: 14px;
+    i {
+      font-size: 24px;
+      color: #000;
+    }
+
+    select {
+      @include padding(2px 15px);
+      background-color: #f0f0f0;
+      border: none;
+      border: 1px solid #000;
+      border-radius: 4px;
+    }
+  }
+}

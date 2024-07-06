@@ -1,12 +1,9 @@
-import Header from '@/Components/Home/Header'
-import { useTranslations } from 'next-intl'
+import Hero from '@/Components/Home/Hero/Hero'
 
-export default function Home() {
-  const { locale } = useTranslations()
-  const t = useTranslations('HomePage')
+export default async function Home() {
   return (
     <main>
-      <h1>{t('title')}</h1>
+      <Hero />
     </main>
   )
 }
