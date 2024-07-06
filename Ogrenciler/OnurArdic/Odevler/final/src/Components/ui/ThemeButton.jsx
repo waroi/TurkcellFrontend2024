@@ -1,4 +1,5 @@
 import React from 'react'
+import './ui.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleTheme, selectTheme } from '../../app/lib/features/themeslice'
 
@@ -11,8 +12,8 @@ const ThemeButton = () => {
   }
 
   return (
-    <button onClick={handleToggleTheme}>
-      Switch to {theme === 'light' ? 'dark' : 'light'} mode
+    <button className="theme-btn" onClick={handleToggleTheme}>
+      {theme === 'light' ? 'dark' : 'light'}
     </button>
   )
 }
