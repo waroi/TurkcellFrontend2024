@@ -45,45 +45,6 @@
           border-bottom: 1px solid #ddd;
           color: #333;
         }
-
-        .navbar-search {
-          display: flex;
-          align-items: center;
-
-          i {
-            margin-right: 10px;
-            font-size: 17px;
-          }
-
-          input {
-            padding: 10px 30px;
-            width: 100%;
-            background-color: #f0f0f0;
-            border: none;
-            border-radius: 5px;
-            outline: none;
-          }
-
-          .buttons-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-
-            a,
-            select {
-              width: 100%;
-              padding: 10px;
-              text-align: left;
-              background-color: #f0f0f0;
-              border-radius: 5px;
-              border: none;
-            }
-
-            a i {
-              margin-right: 10px;
-            }
-          }
-        }
       }
     }
 
@@ -139,6 +100,16 @@
       font-size: 24px;
       a {
         margin-left: 10px;
+      }
+
+      .search {
+        background-color: transparent;
+        border: none;
+        font-size: 22px;
+
+        @media (min-width: 900px) {
+          display: none;
+        }
       }
     }
   }

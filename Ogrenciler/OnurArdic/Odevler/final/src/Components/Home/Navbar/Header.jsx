@@ -55,6 +55,9 @@ const Header = () => {
         </h6>
       </div>
       <div className="navbar-wrapper container">
+        <div className="menu-toggle" onClick={toggleMenu}>
+          <i className={`bi ${isMenuOpen ? 'bi-x' : 'bi-list'}`}></i>
+        </div>
         <div className="logo">
           <Link href={createLocalizedLink('/')}>{t('NavbarLogo')}</Link>
         </div>
@@ -78,16 +81,15 @@ const Header = () => {
         </div>
 
         <div className="user-buttons">
+          <button className="search">
+            <i className="bi bi-search"></i>
+          </button>
           <Link href={createLocalizedLink('/cart')} className="cart-btn">
             <i className="bi bi-cart-plus"></i>
           </Link>
           <Link href={createLocalizedLink('/login')} className="login-btn">
             <i className="bi bi-person-circle"></i>
           </Link>
-        </div>
-
-        <div className="menu-toggle" onClick={toggleMenu}>
-          <i className={`bi ${isMenuOpen ? 'bi-x' : 'bi-list'}`}></i>
         </div>
       </div>
     </nav>

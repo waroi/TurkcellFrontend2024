@@ -1,14 +1,16 @@
 @import '../Home.scss';
+
 @mixin new-arrival-styles {
   margin-top: 50px;
+
   h4 {
     @include typography('Integral CF Regular', 64px, 400, 3px);
     text-align: center;
   }
 
-  .new-arrival-items {
+  .new-arrival-items,
+  .top-selling-items {
     margin-top: 30px;
-    @include flexible(flex, space-between, center);
 
     .product-card {
       .img {
@@ -19,22 +21,27 @@
           object-fit: cover;
         }
       }
+
       .product-content {
         h5 {
           @include typography('Satoshi', 20px, 1px);
         }
+
         .price-wrapper {
           @include flexible(flex);
           align-items: center;
+
           p {
             @include typography('Satoshi', 24px, 600, 22px);
             margin: 10px 0;
+
             span {
               opacity: 0.5;
               text-decoration: line-through;
               margin-left: 5px;
             }
           }
+
           .discount {
             @include typography('Satoshi', 12px, 200, 22px);
             @include padding(6px 14px);
@@ -45,6 +52,12 @@
           }
         }
       }
+    }
+  }
+
+  @media (max-width: 900px) {
+    h4 {
+      @include typography('Integral CF Regular', 32px, 700, uppercase, 3px);
     }
   }
 }
@@ -60,42 +73,32 @@
     .top-selling-items {
       @include flexible(flex, space-between, center);
       margin-top: 30px;
-      .product-card {
-        .img {
-          img {
-            width: 295px;
-            height: 298px;
-            border-radius: 20px;
-            object-fit: cover;
-          }
-        }
-        .product-content {
-          h5 {
-            @include typography('Satoshi', 20px, 1px);
-          }
-          .price-wrapper {
-            @include flexible(flex);
-            align-items: center;
-            p {
-              @include typography('Satoshi', 24px, 600, 22px);
-              margin: 10px 0;
-              span {
-                opacity: 0.5;
-                text-decoration: line-through;
-                margin-left: 5px;
-              }
-            }
-            .discount {
-              @include typography('Satoshi', 12px, 200, 22px);
-              @include padding(6px 14px);
-              border-radius: 62px;
-              color: #ff3333;
-              background-color: rgba(255, 51, 51, 0.1);
-              margin-left: 10px;
-            }
-          }
-        }
-      }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .new-arrival-items,
+  .top-selling-items {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+
+    .product-card {
+      flex: 0 0 auto;
+      margin-right: 16px;
+      scroll-snap-align: start;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .new-arrival-items,
+  .top-selling-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }

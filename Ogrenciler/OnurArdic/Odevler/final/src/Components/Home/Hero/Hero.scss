@@ -9,6 +9,10 @@ header {
     grid-template-columns: 45% 55%;
     align-items: center;
 
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+    }
+
     .hero-left {
       .hero-left-content {
         h1 {
@@ -29,6 +33,21 @@ header {
           padding: 16px 54px 16px 54px;
           border-radius: 54px;
         }
+
+        @media (max-width: 900px) {
+          padding: 10px 20px;
+          h1 {
+            @include typography('Integral CF Regular', 36px, 700, uppercase, 3px);
+          }
+          p {
+            @include typography('Satoshi', 14px, lowercase, 22px);
+          }
+
+          a {
+            display: block;
+            text-align: center;
+          }
+        }
       }
 
       .statistics {
@@ -39,6 +58,16 @@ header {
           h4 {
             @include typography('Satoshi', 40px, 600, uppercase, 1px);
             text-align: center;
+          }
+        }
+
+        @media (max-width: 900px) {
+          flex-wrap: wrap;
+          text-align: center;
+          .staticks-content {
+            &:last-child {
+              margin: 0 auto;
+            }
           }
         }
       }
@@ -57,5 +86,19 @@ header {
   .brands-wrapper {
     @include flexible(flex, space-between, center);
     @include padding(40px 0px);
+  }
+
+  @media (max-width: 900px) {
+    .brands-wrapper {
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 10px;
+
+      .brands {
+        &:last-child {
+          margin: 0 auto;
+        }
+      }
+    }
   }
 }

@@ -17,4 +17,9 @@
   border-radius: 62px;
   background-color: transparent;
   border: 1px solid #ccc;
+
+  @media (max-width: 900px) {
+    display: block;
+    width: 100%;
+  }
 }
