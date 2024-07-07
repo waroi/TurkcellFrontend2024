@@ -56,5 +56,52 @@
         flex: 2;
       }
     }
+
+    @media (max-width: 900px) {
+      h4 {
+        @include typography('Integral CF Regular', 36px, 700, 3px);
+      }
+      @include padding(20px 20px);
+      .top-banner {
+        flex-wrap: wrap;
+        padding: 0;
+
+        .top-banner-left {
+          flex: 100%;
+          gap: 10px;
+          background-position: -20% 42%;
+
+          h5 {
+            @include typography('Satoshi', 24px, 700, 3px);
+            position: absolute;
+            color: #000;
+            top: 40px;
+            left: 40px;
+          }
+        }
+
+        .top-banner-right {
+          @extend .top-banner-left;
+          flex: 3;
+          background: url('../../../../public/banner/topbannerright.png');
+          background-position: 0% 30%;
+        }
+      }
+
+      .bottom-banner {
+        @extend .top-banner;
+
+        .bottom-banner-left {
+          @extend .top-banner-left;
+          background-position: 40% 42%;
+        }
+        .bottom-banner-right {
+          @extend .top-banner-right;
+          background: url('../../../../public/banner/bottombannerright.png');
+          background-position: -60% 52%;
+          background-size: cover;
+        }
+      }
+    }
   }
 }
