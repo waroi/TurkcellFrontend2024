@@ -6,10 +6,22 @@ import { useTranslations } from 'next-intl'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
+import { useEffect, useState } from 'react'
 
-const HappyCustomer = async () => {
+//Merhaba hocam, slider için client tarafında kullanmam gerekti, nextjs fetchin işlemlerini client tarafında yapamıyoruz bu yüzden mecburen böyle yaptım :(
+
+const HappyCustomer = () => {
+  const [data, setData] = useState([])
   const t = useTranslations('HomePageText')
-  const userComments = await getComments()
+  useEffect(() => {
+    getComments()
+      .then((result) => {
+        setData(result)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }, [])
 
   const settings = {
     dots: true,
@@ -57,7 +69,7 @@ const HappyCustomer = async () => {
           </div>
         </div>
         <Slider {...settings} className="carousel">
-          {userComments.map((comment) => (
+          {data.map((comment) => (
             <div key={comment.id} className="comment-slide">
               <CommentsCard comment={comment} />
             </div>
