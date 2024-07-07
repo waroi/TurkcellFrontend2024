@@ -1,0 +1,62 @@
+@import '../Home.scss';
+.navbar {
+  @include typography('Satoshi', 14px, normal);
+
+  .navbar-top {
+    @include colors(#fff, #000);
+    @include padding(10px 0);
+    text-align: center;
+  }
+
+  .navbar-wrapper {
+    @include flexible(flex, space-between, center);
+    @include padding(10px 0);
+
+    .logo {
+      @include typography('Integral CF Regular', 32px, 700, uppercase, 1px);
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .navbar-links {
+    @include typography('Satoshi', 16px, 400);
+    @include flexible(flex);
+    gap: 24px;
+  }
+
+  .navbar-search {
+    position: relative;
+    input {
+      padding: 10px 30px;
+      width: 450px;
+      background-color: #f0f0f0;
+      border: none;
+      border-radius: 30px;
+      outline: none;
+    }
+
+    i {
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      font-size: 17px;
+    }
+  }
+
+  .buttons-wrapper {
+    @include flexible(flex, center);
+    gap: 14px;
+    i {
+      font-size: 24px;
+    }
+
+    select {
+      @include padding(2px 15px);
+      background-color: #f0f0f0;
+      border: none;
+      border: 1px solid #000;
+      border-radius: 4px;
+    }
+  }
+}

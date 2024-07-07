@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux'
 import { setLocale } from '../../../app/lib/features/localeslice'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
-import '../Home.scss'
+import './Navbar.scss'
 import ThemeButton from '@/Components/ui/ThemeButton'
 
 const Header = () => {

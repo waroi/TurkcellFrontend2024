@@ -12,7 +12,7 @@ header {
     .hero-left {
       .hero-left-content {
         h1 {
-          @include typography('Integral CF Regular', 64px, 400, uppercase, 3px);
+          @include typography('Integral CF Regular', 64px, 700, uppercase, 3px);
         }
 
         p {
