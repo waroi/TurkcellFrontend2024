@@ -7,11 +7,16 @@
       @include flexible(flex, space-between, center);
       h4 {
         @include typography('Integral CF Regular', 48px, 700, 3px);
+
+        @media (max-width: 900px) {
+          @include typography('Integral CF Regular', 32px, 700, 3px);
+        }
       }
     }
   }
 
   .carousel {
+    overflow-x: hidden;
     margin-top: 30px;
     .slick-slide {
       transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;

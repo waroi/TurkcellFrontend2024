@@ -12,6 +12,7 @@
     .top-banner {
       @include flexible(flex, space-around, center);
       @include padding(10px 20px);
+      margin-bottom: 20px;
       gap: 20px;
 
       .top-banner-left {

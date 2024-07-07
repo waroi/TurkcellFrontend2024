@@ -14,6 +14,7 @@ const Banner = () => {
             <h5>{t('Formal')}</h5>
           </div>
         </div>
+
         <div className="bottom-banner">
           <div className="bottom-banner-left">
             <h5>{t('Party')}</h5>

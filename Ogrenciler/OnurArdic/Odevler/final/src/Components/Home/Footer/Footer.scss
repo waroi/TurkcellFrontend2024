@@ -41,6 +41,7 @@ footer {
           }
 
           a {
+            @include typography('Satoshi', 16px, 200, 3px);
             margin-top: 10px;
             @include padding(5px);
             background-color: #fff;
@@ -129,6 +130,45 @@ footer {
 
       .payment {
         @include flexible(flex);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-wrapper {
+      .footer-top {
+        flex-direction: column;
+        padding: 20px 20px;
+        bottom: 80%;
+        .footer-top-left {
+          h4 {
+            @include typography('Integral CF Regular', 32px, 700, 3px);
+          }
+        }
+      }
+
+      .footer-bottom {
+        padding-top: 60px;
+        flex-direction: column;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+        margin-top: 1rem;
+        padding: 1rem;
+
+        h4 {
+          @include typography('Satoshi', 14px, 500, 3px);
+        }
+
+        a {
+          @include typography('Satoshi', 14px, 400, 3px);
+        }
+      }
+
+      .footer-reserved {
+        flex-direction: column;
+        align-items: center;
       }
     }
   }
