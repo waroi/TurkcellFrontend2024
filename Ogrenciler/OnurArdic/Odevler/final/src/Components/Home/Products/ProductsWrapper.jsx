@@ -1,18 +1,17 @@
-import { getArrivalItem } from '@/service/api'
+import { useTranslations } from 'next-intl'
 import ProductItem from './ProductItem/ProductItem'
+import './Products.scss'
 
 const ProductsWrapper = async () => {
-  const Arrival = await getArrivalItem()
-
+  const t = useTranslations('HomePageText')
   return (
     <section>
-      <div className="product-item-wrapper">
+      <div className="product-item-wrapper container">
         <div className="new-arrival-wrapper">
-          <h4>New Arrivals</h4>
+          <h4> {t('ArrivalsTitle')}</h4>
           <div className="new-arrival-items">
-            <ProductItem product={Arrival} />
+            <ProductItem />
           </div>
-          <div className="new-arrival-items"></div>
         </div>
       </div>
     </section>

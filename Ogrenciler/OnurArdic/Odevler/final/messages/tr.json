@@ -23,8 +23,8 @@
     "HeroCustomersText": "Mutlu Müşteri"
   },
 
-  "HomePage": {
-    "ArrivalsTitle": "Yeni Çıkanlar",
-    "TopSellingTitle": "Çok Satanlar"
+  "HomePageText": {
+    "ArrivalsTitle": "YENİ ÇIKANLAR",
+    "TopSellingTitle": "ÇOK SATANLAR"
   }
 }
