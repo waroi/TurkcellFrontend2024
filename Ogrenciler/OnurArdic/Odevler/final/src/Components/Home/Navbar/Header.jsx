@@ -16,6 +16,7 @@ const Header = () => {
   const searchParams = useSearchParams()
   const dispatch = useDispatch()
   const [locale, setOnLocale] = useState('')
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     const localeFromPath = pathname.split('/')[1]
@@ -36,12 +37,18 @@ const Header = () => {
     const currentLocale = locale || 'en'
     return `/${currentLocale}${path}`
   }
+
   const t = useTranslations('Navbar')
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
-    <nav className="navbar ">
+    <nav className="navbar">
       <div className="navbar-top">
         <h6>
-          {t('NavbarTopTitle')} {''}
+          {t('NavbarTopTitle')}{' '}
           <Link href={createLocalizedLink('/login')} className="login-btn">
             {t('Sign')}
           </Link>
@@ -49,34 +56,38 @@ const Header = () => {
       </div>
       <div className="navbar-wrapper container">
         <div className="logo">
-          <Link href={createLocalizedLink('/')}> {t('NavbarLogo')}</Link>
+          <Link href={createLocalizedLink('/')}>{t('NavbarLogo')}</Link>
         </div>
 
-        <div className="navbar-links">
+        <div className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
           <Link href={createLocalizedLink('/shop')}>{t('LinkShop')}</Link>{' '}
-          {/* //TODO arrow koyulacak */}
-          <Link href={createLocalizedLink('/onsale')}> {t('LinkOnSale')}</Link>
-          <Link href={createLocalizedLink('/arrivals')}> {t('LinkArrivals')}</Link>
-          <Link href={createLocalizedLink('/brands')}> {t('Brands')}</Link>
+          <Link href={createLocalizedLink('/onsale')}>{t('LinkOnSale')}</Link>
+          <Link href={createLocalizedLink('/arrivals')}>{t('LinkArrivals')}</Link>
+          <Link href={createLocalizedLink('/brands')}>{t('Brands')}</Link>
+          <div className="navbar-search">
+            <i className="bi bi-search"></i>
+            <input type="text" placeholder={t('Search')} />
+          </div>
+          <div className="buttons-wrapper">
+            <select id="country" onChange={handleChangeCountry} value={locale}>
+              <option value="tr">TR</option>
+              <option value="en">EN</option>
+            </select>
+            <ThemeButton />
+          </div>
         </div>
 
-        <div className="navbar-search">
-          <i className="bi bi-search"></i>
-          <input type="text" placeholder={t('Search')} />
-        </div>
-        <div className="buttons-wrapper">
+        <div className="user-buttons">
           <Link href={createLocalizedLink('/cart')} className="cart-btn">
             <i className="bi bi-cart-plus"></i>
           </Link>
           <Link href={createLocalizedLink('/login')} className="login-btn">
-            <i class="bi bi-person-circle"></i>
+            <i className="bi bi-person-circle"></i>
           </Link>
-          <select id="country" onChange={handleChangeCountry} value={locale}>
-            <option value="tr">TR</option>
-            <option value="en">EN</option>
-          </select>
+        </div>
 
-          <ThemeButton />
+        <div className="menu-toggle" onClick={toggleMenu}>
+          <i className={`bi ${isMenuOpen ? 'bi-x' : 'bi-list'}`}></i>
         </div>
       </div>
     </nav>

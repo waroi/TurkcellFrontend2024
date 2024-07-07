@@ -32,5 +32,37 @@
     "Party": "Parti",
     "Gym": "Spor",
     "HappyCustomersText": "Mutlu Müşterilerimiz"
+  },
+
+  "Footer": {
+    "FooterTopTitle": "SON TEKLİFLERİMİZ HAKKINDA GÜNCEL KALIN",
+    "FooterInput": "Email adresinizi giriniz",
+    "FooterButton": "Haberler için kayıt ol",
+    "FooterLogo": "SHOP.CO",
+    "FooterAbout": "Kadınlar ve erkekler için tarzınıza uygun giymekten gurur duyacağınız kıyafetler satıyoruz.",
+
+    "FooterLinksTitleCompany": "Şirketimiz",
+    "FooterLinksTitleAbout": "Hakkımızda",
+    "FooterLinksFeatures": "Özelliklerimiz",
+    "FooterLinksWorks": "İşlerimiz",
+    "FooterLinksCareer": "Kariyer",
+
+    "FooterLinksTitleHelp": "Yardım",
+    "FooterLinksCustomer": "Müşteri Desteği",
+    "FooterLinksDelivery": "Teslimat Detayları",
+    "FooterLinksTerm": "Şartlar ve Koşullar",
+    "FooterLinksPrivacy": "Gizlilik Politikası",
+
+    "FooterLinksTitleTerms": "Sıkça SS.",
+    "FooterLinksAccount": "Hesap",
+    "FooterLinksShipping": "Teslimatları Yönet",
+    "FooterLinksReturns": "Siparişler",
+    "FooterLinksContact": "Ödeme",
+
+    "FooterLinksResoruces": "Kaynaklar",
+    "FooterLinksBooks": "Ücretsiz e-kitaplar",
+    "FooterLinksDevelopment": "Geliştirme Eğitimi",
+    "FooterLinksBlog": "Nasıl - Blog",
+    "FooterLinksYoutube": "Youtube Playlist"
   }
 }

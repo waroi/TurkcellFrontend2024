@@ -61,6 +61,24 @@ a {
   .banner-area {
     background-color: #000;
   }
+
+  footer {
+    background-color: #000;
+    color: $dark-text;
+
+    a {
+      background-color: #000 !important;
+    }
+
+    .footer-top-right {
+      .input-area {
+        a {
+          background-color: #fff !important;
+          color: #000;
+        }
+      }
+    }
+  }
 }
 
 .container {

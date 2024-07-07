@@ -32,5 +32,39 @@
     "Party": "Party",
     "Gym": "Gym",
     "HappyCustomersText": "OUR HAPPY CUSTOMERS"
+  },
+
+  "Footer": {
+    "FooterTopTitle": "STAY UPTO DATE ABOUT OUR LATEST OFFERS",
+    "FooterInput": "Enter your email address",
+    "FooterButton": "Subscribe to Newslatter",
+    "FooterLogo": "SHOP.CO",
+    "FooterAbout": "We have clothes that suits your style and which you’re proud to wear. From women to men.",
+
+    "FooterLinksTitleCompany": "Company",
+    "FooterLinksTitleAbout": "About",
+    "FooterLinksFeatures": "Features",
+    "FooterLinksWorks": "Works",
+    "FooterLinksCareer": "Career",
+
+    "FooterLinksTitleHelp": "Help",
+    "FooterLinksCustomer": "Customer Support",
+    "FooterLinksDelivery": "Delivery Details",
+    "FooterLinksTerm": "Terms and Conditions",
+    "FooterLinksPrivacy": "Privacy Policy",
+
+    "FooterLinksTitleTerms": "FAQ",
+    "FooterLinksAccount": "Account",
+    "FooterLinksShipping": "Manage Deliveries",
+    "FooterLinksReturns": "Orders",
+    "FooterLinksContact": "Payments",
+
+    "FooterLinksResoruces": "Resources",
+    "FooterLinksBooks": "Free eBooks",
+    "FooterLinksDevelopment": "Development Tutorial",
+    "FooterLinksBlog": "How to - Blog",
+    "FooterLinksYoutube": "Youtube Playlist",
+
+    "FooterReserved": "Shop.co © 2000-2023, All Rights Reserved"
   }
 }
