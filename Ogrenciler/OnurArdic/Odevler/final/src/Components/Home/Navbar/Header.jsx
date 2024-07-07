@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { setLocale } from '../../../app/lib/features/localeslice'
@@ -13,7 +13,6 @@ import ThemeButton from '@/Components/ui/ThemeButton'
 const Header = () => {
   const router = useRouter()
   const pathname = usePathname()
-  const searchParams = useSearchParams()
   const dispatch = useDispatch()
   const [locale, setOnLocale] = useState('')
   const [isMenuOpen, setIsMenuOpen] = useState(false)

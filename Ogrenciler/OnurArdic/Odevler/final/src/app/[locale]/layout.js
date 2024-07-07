@@ -5,6 +5,7 @@ import StoreProvider from '../storeprovider'
 import ClientWrapper from './ClientWrapper'
 import './globals.scss'
 import Footer from '@/Components/Home/Footer/Footer'
+import { Toaster } from 'react-hot-toast'
 
 export const metadata = {
   title: 'SHOP.CO',
@@ -21,6 +22,7 @@ export default async function RootLayout({ children, params: { locale } }) {
           <StoreProvider>
             <ClientWrapper>
               <Header />
+              <Toaster />
               {children}
               <Footer />
             </ClientWrapper>
