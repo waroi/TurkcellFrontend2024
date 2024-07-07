@@ -41,28 +41,28 @@
       "price": "212",
       "oldprice": "$252",
       "discount": "20%",
-      "img": "public/products/tTopSelling/selling00.png"
+      "img": "products/TopSelling/selling00.png"
     },
     {
       "id": "6",
       "title": "Courage Graphic T-shirt",
       "stars": 3,
       "price": "145",
-      "img": "public/products/tTopSelling/selling01.png"
+      "img": "products/TopSelling/selling02.png"
     },
     {
       "id": "7",
       "title": "Loose Fit Bermuda Shorts",
       "stars": 4,
       "price": "80",
-      "img": "public/products/tTopSelling/selling02.png"
+      "img": "products/TopSelling/selling02.png"
     },
     {
       "id": "8",
       "title": "Faded Skınny Jeans",
       "stars": 5,
       "price": "210",
-      "img": "public/products/tTopSelling/selling03.png"
+      "img": "products/TopSelling/selling03.png"
     }
   ],
   "Comments": {

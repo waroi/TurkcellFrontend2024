@@ -25,6 +25,11 @@
 
   "HomePageText": {
     "ArrivalsTitle": "NEW ARRİVALS",
-    "TopSellingTitle": "TOP SELLING"
+    "TopSellingTitle": "TOP SELLING",
+    "DressStyleTitle": "BROWSE BY DRESS STYLE",
+    "Casual": "Casual",
+    "Formal": "Formal",
+    "Party": "Party",
+    "Gym": "Gym"
   }
 }

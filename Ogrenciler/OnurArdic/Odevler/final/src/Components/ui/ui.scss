@@ -3,3 +3,18 @@
   border-radius: 10px;
   border: none;
 }
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.custom-btn {
+  padding: 16px 54px 16px 54px;
+  border: none;
+  border-radius: 62px;
+  background-color: transparent;
+  border: 1px solid #ccc;
+}

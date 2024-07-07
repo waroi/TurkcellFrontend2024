@@ -1,0 +1,60 @@
+@import '../Home.scss';
+.banner-area {
+  background-color: #f0f0f0;
+  border-radius: 40px;
+  .banner-wrapper {
+    @include padding(40px 45px);
+    h4 {
+      @include typography('Integral CF Regular', 48px, 700, 3px);
+      @include padding(40px 0px);
+      text-align: center;
+    }
+    .top-banner {
+      @include flexible(flex, space-around, center);
+      @include padding(10px 20px);
+      gap: 20px;
+
+      .top-banner-left {
+        background: url('../../../../public/banner/topbannerleft.png');
+        background-position: -50% 50%;
+        flex: 2;
+        height: 289px;
+        border-radius: 20px;
+        position: relative;
+
+        h5 {
+          @include typography('Satoshi', 36px, 700, 3px);
+          position: absolute;
+          color: #000;
+          top: 40px;
+          left: 40px;
+        }
+      }
+
+      .top-banner-right {
+        @extend .top-banner-left;
+        flex: 3;
+        background: url('../../../../public/banner/topbannerright.png');
+        background-position: -110% 30%;
+      }
+    }
+
+    .bottom-banner {
+      @extend .top-banner;
+
+      .bottom-banner-left {
+        @extend .top-banner-left;
+        background: url('../../../../public/banner/bottombannerleft.png');
+        flex: 3;
+        background-position: -110% 42%;
+      }
+      .bottom-banner-right {
+        @extend .top-banner-right;
+        background: url('../../../../public/banner/bottombannerright.png');
+        background-position: -30% 52%;
+        background-size: cover;
+        flex: 2;
+      }
+    }
+  }
+}

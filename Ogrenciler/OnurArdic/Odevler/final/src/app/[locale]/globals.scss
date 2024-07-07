@@ -23,6 +23,10 @@ a {
   background-color: $light-background;
   color: $light-text;
 
+  button {
+    color: $light-text;
+  }
+
   a {
     color: $light-text;
   }
@@ -31,11 +35,19 @@ a {
     background: #f2f0f1;
     color: $light-text;
   }
+
+  .banner-area {
+    background-color: #f0f0f0;
+  }
 }
 
 .dark {
   background-color: $dark-background;
   color: $dark-text;
+
+  button {
+    color: $dark-text;
+  }
 
   a {
     color: $dark-text;
@@ -44,6 +56,9 @@ a {
   header {
     background-color: $dark-background;
     color: $dark-text;
+  }
+  .banner-area {
+    background-color: #000;
   }
 }
 

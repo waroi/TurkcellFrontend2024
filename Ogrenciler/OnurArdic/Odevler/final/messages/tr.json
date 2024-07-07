@@ -25,6 +25,11 @@
 
   "HomePageText": {
     "ArrivalsTitle": "YENİ ÇIKANLAR",
-    "TopSellingTitle": "ÇOK SATANLAR"
+    "TopSellingTitle": "ÇOK SATANLAR",
+    "DressStyleTitle": "KIYAFET STİLİNİZE GÖRE GÖZ ATIN",
+    "Casual": "Gündelik",
+    "Formal": "Resmi",
+    "Party": "Parti",
+    "Gym": "Spor"
   }
 }
