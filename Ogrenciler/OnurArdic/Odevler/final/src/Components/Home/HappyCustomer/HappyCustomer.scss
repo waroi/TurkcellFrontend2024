@@ -9,18 +9,10 @@
         @include typography('Integral CF Regular', 48px, 700, 3px);
       }
     }
-
-    .slider-button {
-      button {
-        background-color: transparent;
-        border: none;
-        font-size: 20px;
-        margin-left: 10px;
-      }
-    }
   }
 
   .carousel {
+    margin-top: 30px;
     .slick-slide {
       transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 

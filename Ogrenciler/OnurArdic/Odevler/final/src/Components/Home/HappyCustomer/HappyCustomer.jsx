@@ -8,11 +8,12 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { useEffect, useState } from 'react'
 
-//Merhaba hocam, slider için client tarafında kullanmam gerekti, nextjs fetchin işlemlerini client tarafında yapamıyoruz bu yüzden mecburen böyle yaptım :(
+//Merhaba hocam, slider için client tarafında kullanmam gerekti, nextjs fetching işlemlerini client tarafında yapamıyoruz bu yüzden mecburen böyle yaptım :(
 
 const HappyCustomer = () => {
   const [data, setData] = useState([])
   const t = useTranslations('HomePageText')
+
   useEffect(() => {
     getComments()
       .then((result) => {
@@ -59,19 +60,11 @@ const HappyCustomer = () => {
           <div className="happy-customer-title">
             <h4>{t('HappyCustomersText')}</h4>
           </div>
-          <div className="slider-button">
-            <button className="prev-btn">
-              <i className="bi bi-arrow-left"></i>
-            </button>
-            <button className="next-btn">
-              <i className="bi bi-arrow-right"></i>
-            </button>
-          </div>
         </div>
         <Slider {...settings} className="carousel">
           {data.map((comment) => (
             <div key={comment.id} className="comment-slide">
-              <CommentsCard comment={comment} />
+              <CommentsCard key={comment.id} comment={comment} />
             </div>
           ))}
         </Slider>
