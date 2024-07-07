@@ -17,3 +17,13 @@ export async function getTopSellingItems() {
 
   return res.json()
 }
+
+export async function getComments() {
+  const res = await fetch('http://localhost:3000/Comments')
+
+  if (!res.ok) {
+    throw new Error('Failed to fetch data')
+  }
+
+  return res.json()
+}
