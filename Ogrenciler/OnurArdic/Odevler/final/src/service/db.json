@@ -82,8 +82,29 @@
     {
       "id": "3",
       "Star": 5,
-      "name": "James L.",
-      "comment": "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends."
+      "name": "Ethan R",
+      "comment": "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt."
+    },
+
+    {
+      "id": "4",
+      "Star": 5,
+      "name": "Olivia P.",
+      "comment": "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out."
+    },
+
+    {
+      "id": "5",
+      "Star": 5,
+      "name": "Ava H.",
+      "comment": "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter."
+    },
+
+    {
+      "id": "6",
+      "Star": 5,
+      "name": "Liam K.",
+      "comment": "This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion."
     }
   ]
 }
