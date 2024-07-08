@@ -112,5 +112,16 @@
         }
       }
     }
+
+    .cart-btn {
+      position: relative;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      i {
+        font-size: 24px;
+      }
+    }
   }
 }

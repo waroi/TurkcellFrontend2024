@@ -8,7 +8,10 @@
     "Brands": "Markalar",
     "Search": "Ürünleri Ara...",
     "Login": "Giriş",
-    "Sign": "Kayıt Ol"
+    "Sign": "Kayıt Ol",
+    "CartText": "Sepetim",
+    "GoCart": "Sepete Git",
+    "Clear": "Sepeti Temizle"
   },
 
   "Hero": {

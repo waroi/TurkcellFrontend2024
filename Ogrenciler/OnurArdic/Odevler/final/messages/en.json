@@ -8,7 +8,10 @@
     "Brands": "Brands",
     "Search": "Search for products...",
     "Login ": "Login",
-    "Sign": "Sign up"
+    "Sign": "Sign up",
+    "CartText": "Cart",
+    "GoCart": "Go to Cart",
+    "Clear": "Clear All İtems"
   },
 
   "Hero": {

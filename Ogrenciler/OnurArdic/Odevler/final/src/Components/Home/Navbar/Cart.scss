@@ -1,0 +1,95 @@
+@import '../Home.scss';
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+
+  &.open {
+    right: 0;
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .cart-items {
+    @include flexible(flex, space-between, center);
+    margin-top: 30px;
+    gap: 10px;
+    border: 1px solid #ccc;
+    .cart-items-content {
+      h5 {
+        @include typography('Integral CF Regular', 10px, normal);
+      }
+      @include typography('Satoshi', 14px, normal);
+    }
+    .cart-item-img {
+      img {
+        width: 60px;
+        height: 100%;
+      }
+    }
+  }
+
+  .buttons {
+    .remove-btn {
+      border: none;
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      background-color: #ff333e;
+      color: #fff;
+      border-radius: 50%;
+      transition: 0.3s ease-in-out;
+      border: 1px solid transparent;
+
+      &:hover {
+        background-color: #fafafa;
+        color: #ff333e;
+        border: 1px solid #ccc;
+      }
+    }
+  }
+
+  .cart-btn {
+    @include flexible(flex);
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 10px;
+
+    a {
+      width: 100%;
+      background-color: rgb(5, 138, 45);
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    .clear-all {
+      width: 100%;
+      background-color: rgb(189, 21, 21);
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+    }
+  }
+}

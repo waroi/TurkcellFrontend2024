@@ -9,6 +9,7 @@ import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import './Navbar.scss'
 import ThemeButton from '@/Components/ui/ThemeButton'
+import Cart from './Cart'
 
 const Header = () => {
   const router = useRouter()
@@ -16,7 +17,7 @@ const Header = () => {
   const dispatch = useDispatch()
   const [locale, setOnLocale] = useState('')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   useEffect(() => {
     const localeFromPath = pathname.split('/')[1]
     setOnLocale(localeFromPath || 'en')
@@ -37,18 +38,20 @@ const Header = () => {
     return `/${currentLocale}${path}`
   }
 
-  const t = useTranslations('Navbar')
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen)
+  }
+  const t = useTranslations('Navbar')
   return (
     <nav className="navbar">
       <div className="navbar-top">
         <h6>
           {t('NavbarTopTitle')}{' '}
-          <Link href={createLocalizedLink('/login')} className="login-btn">
+          <Link href={createLocalizedLink('/auth/login')} className="login-btn">
             {t('Sign')}
           </Link>
         </h6>
@@ -83,14 +86,15 @@ const Header = () => {
           <button className="search">
             <i className="bi bi-search"></i>
           </button>
-          <Link href={createLocalizedLink('/cart')} className="cart-btn">
+          <button className="cart-btn" onClick={toggleSidebar}>
             <i className="bi bi-cart-plus"></i>
-          </Link>
-          <Link href={createLocalizedLink('/login')} className="login-btn">
+          </button>
+          <Link href={createLocalizedLink('/auth/login')} className="login-btn">
             <i className="bi bi-person-circle"></i>
           </Link>
         </div>
       </div>
+      <Cart isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
     </nav>
   )
 }
