@@ -4,12 +4,10 @@ import '../../../../../../Components/Details/ProductDetails.scss'
 import ProductVariants from '@/Components/Details/ProductVariants'
 import ProductDetailsİmages from '@/Components/Details/ProductDetailsİmages'
 import { renderStars } from '@/app/Hooks/renderStar'
-import CommentsCard from '@/Components/Home/HappyCustomer/CommentsCard'
 import { getComments } from '@/service/api'
-import { useTranslations } from 'next-intl'
 import ReviewsNav from '@/Components/Details/Reviews/ReviewsNav'
-import CustomButton from '@/Components/ui/CustomButton'
-import CommentModal from '@/Components/ui/CommentModal'
+import CommentSection from '@/Components/Details/Reviews/CommentSection'
+
 async function getProductDetail(category, id) {
   const res = await fetch(`http://localhost:3000/${category}/${id}`)
 
@@ -23,7 +21,8 @@ async function getProductDetail(category, id) {
 const Details = async ({ params }) => {
   const { category, id } = params
   const data = await getProductDetail(category, id)
-  const comments = await getComments()
+  const initialComments = await getComments()
+
   return (
     <>
       <div className="line container"></div>
@@ -57,23 +56,7 @@ const Details = async ({ params }) => {
             </div>
           </div>
 
-          <div className="sort-btn">
-            <select id="sort">
-              <option value="Latest">Latest</option>
-              <option value="New">New</option>
-            </select>
-            <CommentModal />
-          </div>
-
-          <div className="rewiews">
-            {comments.map((comment) => (
-              <CommentsCard comment={comment} />
-            ))}
-          </div>
-
-          <div className="button-wrapper">
-            <CustomButton text={'Load More Views'} />
-          </div>
+          <CommentSection initialComments={initialComments} />
         </section>
       </section>
     </>
