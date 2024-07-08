@@ -19,7 +19,9 @@ export async function getTopSellingItems() {
 }
 
 export async function getComments() {
-  const res = await fetch('http://localhost:3000/Comments')
+  const res = await fetch('http://localhost:3000/Comments', {
+    cache: 'no-store',
+  })
 
   if (!res.ok) {
     throw new Error('Failed to fetch data')

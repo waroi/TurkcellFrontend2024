@@ -9,11 +9,15 @@ import CustomButton from '@/Components/ui/CustomButton'
 const CommentSection = ({ initialComments }) => {
   const [sortedComments, setSortedComments] = useState(initialComments)
 
+  const handleNewComment = (newComment) => {
+    setSortedComments((prevComments) => [newComment, ...prevComments])
+  }
+
   return (
     <div>
       <div className="sort-btn">
         <SortOption initialComments={initialComments} setSortedComments={setSortedComments} />
-        <CommentModal />
+        <CommentModal onCommentSubmit={handleNewComment} />
       </div>
       <div className="reviews">
         {sortedComments.map((comment) => (

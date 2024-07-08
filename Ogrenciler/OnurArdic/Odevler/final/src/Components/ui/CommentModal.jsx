@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import './ui.scss'
 
-const CommentModal = () => {
+const CommentModal = ({ onCommentSubmit }) => {
   const [name, setName] = useState('')
   const [comment, setComment] = useState('')
   const [Star, setStar] = useState(1)
@@ -26,6 +26,10 @@ const CommentModal = () => {
       if (!response.ok) {
         throw new Error('Failed to submit comment')
       }
+
+      const newComment = await response.json()
+
+      onCommentSubmit(newComment)
 
       setName('')
       setComment('')
