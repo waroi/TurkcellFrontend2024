@@ -27,6 +27,10 @@
           @include typography('Satoshi', 20px, 1px);
         }
 
+        .stars {
+          color: gold;
+        }
+
         .price-wrapper {
           @include flexible(flex);
           align-items: center;

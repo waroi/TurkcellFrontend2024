@@ -5,7 +5,8 @@
       "title": "T-shirt with Tape Details",
       "stars": 4,
       "price": "120",
-      "img": "products/arrival00.png"
+      "img": "products/arrival00.png",
+      "desc": "%20 Polyester "
     },
     {
       "id": "2",

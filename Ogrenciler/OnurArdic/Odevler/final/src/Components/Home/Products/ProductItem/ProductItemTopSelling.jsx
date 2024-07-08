@@ -1,13 +1,16 @@
 import { getTopSellingItems } from '@/service/api'
-import '../Products.scss'
+import { renderStars } from '@/app/Hooks/renderStar'
+import { useLocale } from 'next-intl'
 import Link from 'next/link'
+import '../Products.scss'
 const ProductItemTopSelling = async () => {
+  const locale = useLocale()
   const topSelling = await getTopSellingItems()
   return (
     <>
       {topSelling.map((item) => (
         <div className="product-card">
-          <Link href={'/'}>
+          <Link href={`/${locale}/details/topSelling/${item.id}`}>
             <div className="img">
               <img src={item.img} alt={item.title} />
             </div>
@@ -15,9 +18,7 @@ const ProductItemTopSelling = async () => {
 
           <div className="product-content">
             <h5>{item.title}</h5>
-            <div className="stars">
-              <i className="bi bi-star"></i>
-            </div>
+            <div className="stars">{renderStars(item.stars)}</div>
             <div className="price-wrapper">
               <p className="price">
                 ${item.price}

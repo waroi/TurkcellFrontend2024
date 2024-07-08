@@ -1,0 +1,177 @@
+@import '../Home/Home.scss';
+$x30: 30px;
+.product-detail-page {
+  margin-top: 3rem;
+  .product-detail-wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 30px;
+    .product-detail-images {
+      .product-images {
+        @include flexible(flex);
+        gap: 2rem;
+
+        .images-left {
+          @include flexible(flex);
+          flex-direction: column;
+          gap: 1rem;
+
+          img {
+            width: 152px;
+            height: 167px;
+            border-radius: 20px;
+
+            &:active {
+              border: 1px solid #ccc;
+            }
+          }
+        }
+
+        .main-img {
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+
+    .products-content {
+      margin-top: $x30;
+      .product-name {
+        @include typography('Integral CF Regular', 40px, 700, uppercase, 2px);
+      }
+
+      .stars {
+        margin-top: $x30;
+        color: gold;
+      }
+
+      .price {
+        @include flexible(flex);
+        gap: 10px;
+        .price {
+          @include typography('Satoshi', 32px, 700);
+        }
+
+        .old-price {
+          @extend .price;
+          text-decoration: line-through;
+          color: #999;
+        }
+
+        .discount {
+          @include typography('Satoshi', 16px, 500, 22px);
+          border-radius: 62px;
+          color: #ff3333;
+          background-color: rgba(255, 51, 51, 0.1);
+          margin: 3px 0px;
+          @include padding(6px 14px);
+        }
+      }
+
+      .desc {
+        @include typography('Satoshi', 16px, 400, 22px);
+        opacity: 0.7;
+        margin-top: 10px;
+        margin-top: $x30;
+        margin-bottom: $x30;
+      }
+
+      .product-variants {
+        margin: $x30 0;
+        .product-colors {
+          p {
+            @include typography('Satoshi', 16px, 400, 22px);
+            opacity: 0.7;
+            margin-top: 10px;
+          }
+
+          .color-variants {
+            .variant-btn {
+              margin-top: 10px;
+              border-radius: 62px;
+              color: #ff3333;
+              background-color: rgba(255, 51, 51, 0.1);
+              width: 37px;
+              height: 37px;
+              border: none;
+              position: relative;
+
+              i {
+                color: #fff;
+                font-size: 29px;
+                padding: 0;
+                position: absolute;
+                top: 3px;
+                left: 4px;
+              }
+
+              &:nth-child(1) {
+                background-color: rgb(255, 0, 0);
+              }
+
+              &:nth-child(2) {
+                background-color: rgb(0, 255, 0);
+                margin-left: 6px;
+              }
+              &:nth-child(3) {
+                background-color: rgb(0, 0, 255);
+                margin-left: 6px;
+              }
+            }
+          }
+        }
+        .product-size {
+          margin: $x30 0;
+          p {
+            @include typography('Satoshi', 16px, 400, 22px);
+            opacity: 0.7;
+            margin-top: 10px;
+          }
+
+          .size-variants {
+            @include flexible(flex);
+            gap: 5px;
+            .variant-btn {
+              @include typography('Satoshi', 16px, 400, 22px);
+              @include padding(10px 20px);
+              background-color: #f0f0f0;
+              color: #000;
+              margin-top: 10px;
+              border: none;
+              position: relative;
+              border-radius: 20px;
+
+              &.active {
+                background-color: #000;
+                color: #fff;
+              }
+            }
+          }
+        }
+
+        .product-quantity {
+          @include flexible(flex);
+          margin: $x30 0;
+          gap: 10px;
+
+          input {
+            @include padding(8px 10px);
+          }
+
+          button {
+            display: block;
+            width: 100%;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 62px;
+          }
+        }
+      }
+    }
+  }
+}
