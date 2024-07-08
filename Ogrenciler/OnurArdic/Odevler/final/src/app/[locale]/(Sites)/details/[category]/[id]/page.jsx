@@ -1,7 +1,6 @@
 import '../../../../globals.scss'
 import '../../../../../../Components/Details/ProductDetails.scss'
 
-renderStars
 import ProductVariants from '@/Components/Details/ProductVariants'
 import ProductDetailsİmages from '@/Components/Details/ProductDetailsİmages'
 import { renderStars } from '@/app/Hooks/renderStar'
@@ -10,6 +9,7 @@ import { getComments } from '@/service/api'
 import { useTranslations } from 'next-intl'
 import ReviewsNav from '@/Components/Details/Reviews/ReviewsNav'
 import CustomButton from '@/Components/ui/CustomButton'
+import CommentModal from '@/Components/ui/CommentModal'
 async function getProductDetail(category, id) {
   const res = await fetch(`http://localhost:3000/${category}/${id}`)
 
@@ -62,9 +62,9 @@ const Details = async ({ params }) => {
               <option value="Latest">Latest</option>
               <option value="New">New</option>
             </select>
-
-            <button className="write-review-modal">Write a Review</button>
+            <CommentModal />
           </div>
+
           <div className="rewiews">
             {comments.map((comment) => (
               <CommentsCard comment={comment} />

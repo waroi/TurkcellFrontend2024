@@ -71,40 +71,57 @@
       "id": "1",
       "Star": 5,
       "name": "Sarah M.",
-      "comment": "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."
+      "comment": "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+      "date": "August 16, 2023"
     },
     {
       "id": "2",
       "Star": 5,
       "name": "Alex K.",
-      "comment": "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions."
+      "comment": "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.",
+      "date": "August 21, 2023"
     },
     {
       "id": "3",
       "Star": 5,
       "name": "Ethan R",
-      "comment": "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt."
+      "comment": "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt.",
+      "date": "August 21, 2023"
     },
-
     {
       "id": "4",
       "Star": 5,
       "name": "Olivia P.",
-      "comment": "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out."
+      "comment": "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out.",
+      "date": "August 19, 2023"
     },
-
     {
       "id": "5",
       "Star": 5,
       "name": "Ava H.",
-      "comment": "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter."
+      "comment": "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter.",
+      "date": "August 21, 2023"
     },
-
     {
       "id": "6",
       "Star": 5,
       "name": "Liam K.",
-      "comment": "This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion."
+      "comment": "This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion.",
+      "date": "August 21, 2023"
+    },
+    {
+      "id": "bda8",
+      "name": "Onur A.",
+      "comment": "Gideri var",
+      "Star": "3",
+      "date": "2024-07-08T18:15:50.652Z"
+    },
+    {
+      "id": "dc1a",
+      "name": "Onur Ardıç",
+      "comment": "+40 baba gömleği",
+      "Star": "3",
+      "date": "2024-07-08T18:19:12.427Z"
     }
   ]
 }

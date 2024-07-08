@@ -11,7 +11,7 @@ const CommentsCard = ({ comment }) => {
           <i class="bi bi-check-circle-fill"></i>
         </h5>
         <p className="comments-text">"{comment.comment}"</p>
-        <p className="comments-date">Posted On August 16, 2023</p>
+        <p className="comments-date">Posted On {comment.date}</p>
       </div>
     </div>
   )
