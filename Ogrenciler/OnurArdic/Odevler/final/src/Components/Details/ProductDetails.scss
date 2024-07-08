@@ -145,6 +145,10 @@ $x30: 30px;
               position: relative;
               border-radius: 20px;
 
+              &.selected {
+                border: 2px solid #000;
+              }
+
               &.active {
                 background-color: #000;
                 color: #fff;

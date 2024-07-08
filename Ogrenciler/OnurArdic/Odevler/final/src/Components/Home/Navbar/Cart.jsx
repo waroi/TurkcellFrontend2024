@@ -31,8 +31,8 @@ const Cart = ({ isSidebarOpen, toggleSidebar }) => {
             <div className="cart-items-content">
               <h5>{cartItem.title}</h5>
               <p>Price: {cartItem.price}</p>
-              <p>Size : {cartItem.size}</p>
-              <p>Color : {cartItem.color}</p>
+              <p>Size : {cartItem.selectedSize}</p>
+              <p>Color : {cartItem.selectedColor}</p>
               <p>Quantity: {cartItem.quantity}</p>
             </div>
 
