@@ -39,7 +39,7 @@ const Details = async ({ params }) => {
             {data.desc && <div className="desc">{data.desc}</div>}
 
             <hr />
-            <ProductVariants />
+            <ProductVariants data={data} />
           </div>
         </div>
       </section>

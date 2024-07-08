@@ -1,4 +1,6 @@
-const ProductVariants = () => {
+import AddToCartBtn from './AddToCartBtn'
+
+const ProductVariants = ({ data }) => {
   return (
     <div className="product-variants">
       <div className="product-colors">
@@ -24,10 +26,7 @@ const ProductVariants = () => {
         </div>
       </div>
 
-      <div className="product-quantity">
-        <input type="number" min="1" max="10" defaultValue="1" />
-        <button className="add-to-cart-btn">Add to Cart</button>
-      </div>
+      <AddToCartBtn data={data} />
     </div>
   )
 }
