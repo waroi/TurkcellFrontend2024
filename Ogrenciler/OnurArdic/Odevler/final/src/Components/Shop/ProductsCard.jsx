@@ -70,7 +70,6 @@ const ProductsCard = () => {
   return (
     <>
       <div className="nav-sort">
-        <label htmlFor="sort">Sorted by</label>
         <select className="sort" id="sort" value={sortBy} onChange={handleSortChange}>
           <option value="lowest-price">Lowest Price</option>
           <option value="highest-price">Highest Price</option>

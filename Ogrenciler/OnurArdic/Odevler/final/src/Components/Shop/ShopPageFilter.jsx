@@ -13,6 +13,10 @@ import './Filter.scss'
 const ShopPageFilter = () => {
   const dispatch = useDispatch()
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+  const closeMenu = () => toggleMenu(false)
+
   const [selectedCategories, setSelectedCategories] = useState([])
   const [selectedPriceRange, setSelectedPriceRange] = useState([0, 1000])
   const [selectedColors, setSelectedColors] = useState([])
@@ -53,92 +57,104 @@ const ShopPageFilter = () => {
     dispatch(setColors(selectedColors))
     dispatch(setSizes(selectedSizes))
     dispatch(setStyles(selectedStyles))
+    closeMenu(false)
   }
 
   return (
-    <div className="shop-page-filter">
-      <div className="filter-section">
-        <h3>Ürün Filtreleme</h3>
-        <hr />
-        <div className="categories">
-          {['T-shirt', 'Shorts', 'Shirts', 'Hoodie', 'Jeans'].map((category) => (
-            <div
-              key={category}
-              className={`category ${selectedCategories.includes(category) ? 'active' : ''}`}
-              onClick={() => handleCategoryClick(category)}
-            >
-              {category}
+    <>
+      <button className="toggle-button" onClick={toggleMenu}>
+        <i className="bi bi-layout-sidebar-inset"></i>
+      </button>
+
+      <div className={`shop-page-filter ${isMenuOpen ? 'open' : ''}`}>
+        <div className="filter-menu">
+          <div className="filter-section">
+            <h3>Ürün Filtreleme</h3>
+            <button className="deleteSide" onClick={closeMenu}>
+              <i className="bi bi-x-circle"></i>
+            </button>
+            <hr />
+            <div className="categories">
+              {['T-shirt', 'Shorts', 'Shirts', 'Hoodie', 'Jeans'].map((category) => (
+                <div
+                  key={category}
+                  className={`category ${selectedCategories.includes(category) ? 'active' : ''}`}
+                  onClick={() => handleCategoryClick(category)}
+                >
+                  {category}
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
 
-      <div className="filter-section">
-        <h3>Fiyat Aralığı</h3>
-        <hr />
-        <input
-          type="range"
-          min="0"
-          max="1000"
-          value={selectedPriceRange}
-          className="price-range"
-          onChange={(e) => setSelectedPriceRange([0, e.target.value])}
-        />
-        <div className="price-range-value">
-          ${selectedPriceRange[0]} - ${selectedPriceRange[1]}
-        </div>
-      </div>
-
-      <div className="filter-section">
-        <h3>Renkler</h3>
-        <hr />
-        <div className="colors">
-          {['Red', 'Blue', 'Green', 'Yellow', 'Black'].map((color) => (
-            <div
-              key={color}
-              className={`color ${selectedColors.includes(color) ? 'active' : ''}`}
-              style={{ backgroundColor: color }}
-              onClick={() => handleColorClick(color)}
-            ></div>
-          ))}
-        </div>
-      </div>
-
-      <div className="filter-section">
-        <h3>Size</h3>
-        <hr />
-        <div className="sizes">
-          {['Small', 'Medium', 'Large', 'X-Large'].map((size) => (
-            <div
-              key={size}
-              className={`size ${selectedSizes.includes(size) ? 'active' : ''}`}
-              onClick={() => handleSizeClick(size)}
-            >
-              {size}
+          <div className="filter-section">
+            <h3>Fiyat Aralığı</h3>
+            <hr />
+            <input
+              type="range"
+              min="0"
+              max="1000"
+              value={selectedPriceRange}
+              className="price-range"
+              onChange={(e) => setSelectedPriceRange([0, e.target.value])}
+            />
+            <div className="price-range-value">
+              ${selectedPriceRange[0]} - ${selectedPriceRange[1]}
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
 
-      <div className="filter-section">
-        <h3>Dress Style</h3>
-        <hr />
-        <div className="styles">
-          {['Casual', 'Formal', 'Party', 'Gym'].map((style) => (
-            <div
-              key={style}
-              className={`style ${selectedStyles.includes(style) ? 'active' : ''}`}
-              onClick={() => handleStyleClick(style)}
-            >
-              {style}
+          <div className="filter-section">
+            <h3>Renkler</h3>
+            <hr />
+            <div className="colors">
+              {['Red', 'Blue', 'Green', 'Yellow', 'Black'].map((color) => (
+                <div
+                  key={color}
+                  className={`color ${selectedColors.includes(color) ? 'active' : ''}`}
+                  style={{ backgroundColor: color }}
+                  onClick={() => handleColorClick(color)}
+                ></div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          <div className="filter-section">
+            <h3>Size</h3>
+            <hr />
+            <div className="sizes">
+              {['Small', 'Medium', 'Large', 'X-Large'].map((size) => (
+                <div
+                  key={size}
+                  className={`size ${selectedSizes.includes(size) ? 'active' : ''}`}
+                  onClick={() => handleSizeClick(size)}
+                >
+                  {size}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="filter-section">
+            <h3>Dress Style</h3>
+            <hr />
+            <div className="styles">
+              {['Casual', 'Formal', 'Party', 'Gym'].map((style) => (
+                <div
+                  key={style}
+                  className={`style ${selectedStyles.includes(style) ? 'active' : ''}`}
+                  onClick={() => handleStyleClick(style)}
+                >
+                  {style}
+                </div>
+              ))}
+            </div>
+            <button className="apply-button" onClick={handleApplyFilters}>
+              Filtrele
+            </button>
+          </div>
         </div>
-        <button className="apply-button" onClick={handleApplyFilters}>
-          Filtrele
-        </button>
       </div>
-    </div>
+    </>
   )
 }
 

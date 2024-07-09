@@ -6,124 +6,178 @@
 
   @media (max-width: 800px) {
     border: none;
+    width: 0;
   }
 
-  .filter-section {
-    margin-bottom: 20px;
-
-    h3 {
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
-    hr {
+  .toggle-button {
+    display: none;
+    @media (max-width: 800px) {
+      display: block;
+      background-color: transparent;
       border: none;
-      border-top: 1px solid #ddd;
-      margin: 10px 0;
-    }
-  }
-
-  .categories {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-
-    .category {
-      padding: 5px 10px;
-      margin: 5px;
+      top: -4px;
+      right: 35%;
+      position: absolute;
       cursor: pointer;
-      border-radius: 3px;
-      transition: background-color 0.3s;
-
-      &.active {
-        background-color: #007bff;
-        color: #fff;
-      }
-    }
-  }
-
-  .price-range-value {
-    font-size: 14px;
-    margin-top: 5px;
-  }
-
-  .colors {
-    display: flex;
-    flex-wrap: wrap;
-
-    .color {
-      width: 30px;
-      height: 30px;
-      margin: 5px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: transform 0.3s;
+      font-size: 25px;
+      color: #000;
+      transition: color 0.3s;
 
       &:hover {
-        transform: scale(1.1);
-      }
-
-      &.active {
-        border: 2px solid #000;
-        transform: scale(1.2);
+        color: #0056b3;
       }
     }
   }
 
-  .sizes {
-    display: flex;
-    flex-wrap: wrap;
+  .shop-page-filter {
+    position: relative;
 
-    .size {
-      padding: 5px 10px;
-      margin: 5px;
+    .filter-section {
+      margin-bottom: 20px;
+      .deleteSide {
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        font-size: 25px;
+        background-color: transparent;
+        border: none;
+        display: none;
+
+        @media (max-width: 800px) {
+          display: block;
+        }
+      }
+      h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 10px 0;
+      }
+    }
+
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      .category {
+        padding: 5px 10px;
+        margin: 5px;
+        cursor: pointer;
+        border-radius: 3px;
+        transition: background-color 0.3s;
+
+        &.active {
+          background-color: #007bff;
+          color: #fff;
+        }
+      }
+    }
+
+    .price-range-value {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .colors {
+      display: flex;
+      flex-wrap: wrap;
+
+      .color {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: transform 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        &.active {
+          border: 2px solid #000;
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    .sizes {
+      display: flex;
+      flex-wrap: wrap;
+
+      .size {
+        padding: 5px 10px;
+        margin: 5px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        transition: background-color 0.3s;
+
+        &.active {
+          background-color: #007bff;
+          color: #fff;
+        }
+      }
+    }
+
+    .styles {
+      display: flex;
+      flex-direction: column;
+
+      .style {
+        padding: 5px 10px;
+        margin: 5px;
+        cursor: pointer;
+        border-radius: 3px;
+        transition: background-color 0.3s;
+
+        &.active {
+          background-color: #007bff;
+          color: #fff;
+        }
+      }
+    }
+
+    .apply-button {
+      display: block;
+      width: 100%;
+      padding: 10px 20px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 62px;
       cursor: pointer;
-      border: 1px solid #ccc;
-      border-radius: 3px;
       transition: background-color 0.3s;
-      border-radius: 50px;
+      border: 1px solid transparent;
 
-      &.active {
-        background-color: #007bff;
-        color: #fff;
+      &:hover {
+        border: 1px solid #ccc;
+        background-color: #fff;
+        color: #000;
       }
     }
-  }
 
-  .styles {
-    display: flex;
-    flex-direction: column;
-
-    .style {
-      padding: 5px 10px;
-      margin: 5px;
-      cursor: pointer;
-      border-radius: 3px;
-      transition: background-color 0.3s;
-
-      &.active {
-        background-color: #007bff;
-        color: #fff;
-      }
-    }
-  }
-
-  .apply-button {
-    display: block;
-    width: 100%;
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 62px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    border: 1px solid transparent;
-
-    &:hover {
-      border: 1px solid #ccc;
+    @media (max-width: 800px) {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
       background-color: #fff;
-      color: #000;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow-y: auto;
+      padding: 20px;
+      transition: left 0.3s ease;
+      z-index: 5;
+
+      &.open {
+        left: 0;
+      }
     }
   }
 }
