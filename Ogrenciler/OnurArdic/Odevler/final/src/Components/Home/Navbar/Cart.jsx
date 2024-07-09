@@ -49,7 +49,7 @@ const Cart = ({ isSidebarOpen, toggleSidebar }) => {
 
       {cartItems.length ? (
         <div className="cart-btn">
-          <Link href={`${locale}/cart`} className="go-to-cart">
+          <Link href={`/${locale}/cart`} className="go-to-cart">
             Sepete Git
           </Link>
         </div>
