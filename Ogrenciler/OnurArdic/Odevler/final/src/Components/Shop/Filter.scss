@@ -1,0 +1,124 @@
+.shop-page-filter-wrapper {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+
+  .filter-section {
+    margin-bottom: 20px;
+
+    h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 10px 0;
+    }
+  }
+
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    .category {
+      padding: 5px 10px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: background-color 0.3s;
+
+      &.active {
+        background-color: #007bff;
+        color: #fff;
+      }
+    }
+  }
+
+  .price-range-value {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .colors {
+    display: flex;
+    flex-wrap: wrap;
+
+    .color {
+      width: 30px;
+      height: 30px;
+      margin: 5px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &.selected {
+        border: 2px solid #007bff;
+      }
+    }
+  }
+
+  .sizes {
+    display: flex;
+    flex-wrap: wrap;
+
+    .size {
+      padding: 5px 10px;
+      margin: 5px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      transition: background-color 0.3s;
+      border-radius: 50px;
+
+      &.selected {
+        background-color: #007bff;
+        color: #fff;
+      }
+    }
+  }
+
+  .styles {
+    display: flex;
+    flex-direction: column;
+
+    .style {
+      padding: 5px 10px;
+      margin: 5px;
+      cursor: pointer;
+      border-radius: 3px;
+      transition: background-color 0.3s;
+
+      &.selected {
+        background-color: #007bff;
+        color: #fff;
+      }
+    }
+  }
+
+  .apply-button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 62px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid transparent;
+
+    &:hover {
+      border: 1px solid #ccc;
+      background-color: #fff;
+      color: #000;
+    }
+  }
+}

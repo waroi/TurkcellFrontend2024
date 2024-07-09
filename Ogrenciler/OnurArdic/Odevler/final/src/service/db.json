@@ -6,7 +6,10 @@
       "stars": 4,
       "price": "120",
       "img": "products/arrival00.png",
-      "desc": "%20 Polyester "
+      "desc": "%20 Polyester ",
+      "category": "T-shirt",
+      "color": "Black",
+      "size": "Small"
     },
     {
       "id": "2",
@@ -15,14 +18,22 @@
       "price": "240",
       "oldprice": "$260",
       "discount": "20%",
-      "img": "products/arrival01.png"
+      "img": "products/arrival01.png",
+      "category": "Jeans",
+      "style": "Casual",
+      "color": "Blue",
+      "size": "Medium"
     },
     {
       "id": "3",
       "title": "Checkered Shirt",
       "stars": 3,
       "price": "180",
-      "img": "products/arrival02.png"
+      "img": "products/arrival02.png",
+      "category": "Shirt",
+      "style": "Formal",
+      "color": "Red",
+      "size": "Large"
     },
     {
       "id": "4",
@@ -31,7 +42,11 @@
       "price": "130",
       "oldprice": "$160",
       "discount": "30%",
-      "img": "products/arrival03.png"
+      "img": "products/arrival03.png",
+      "category": "T-shirt",
+      "style": "Casual",
+      "color": "Orange",
+      "size": "Medium"
     }
   ],
   "topSelling": [
@@ -42,28 +57,44 @@
       "price": "212",
       "oldprice": "$252",
       "discount": "20%",
-      "img": "products/TopSelling/selling00.png"
+      "img": "products/TopSelling/selling00.png",
+      "category": "Shirt",
+      "style": "Party",
+      "color": "Green",
+      "size": "Small"
     },
     {
       "id": "6",
       "title": "Courage Graphic T-shirt",
       "stars": 3,
       "price": "145",
-      "img": "products/TopSelling/selling01.png"
+      "img": "products/TopSelling/selling01.png",
+      "category": "Shirt",
+      "style": "Casual",
+      "color": "Orange",
+      "size": "Large"
     },
     {
       "id": "7",
       "title": "Loose Fit Bermuda Shorts",
       "stars": 4,
       "price": "80",
-      "img": "products/TopSelling/selling02.png"
+      "img": "products/TopSelling/selling02.png",
+      "category": "Shorts",
+      "style": "Party",
+      "color": "Blue",
+      "size": "Small"
     },
     {
       "id": "8",
       "title": "Faded Skınny Jeans",
       "stars": 5,
       "price": "210",
-      "img": "products/TopSelling/selling03.png"
+      "img": "products/TopSelling/selling03.png",
+      "category": "Jeans",
+      "style": "Formal",
+      "color": "Black",
+      "size": "X-Large"
     }
   ],
 
@@ -75,7 +106,11 @@
       "price": "212",
       "oldprice": "$242",
       "discount": "20%",
-      "img": "Also/Also00.png"
+      "img": "Also/Also00.png",
+      "category": "T-shirt",
+      "style": "Formal",
+      "color": "Blue",
+      "size": "Large"
     },
 
     {
@@ -83,7 +118,11 @@
       "title": "Gradient Graphic T-shirt",
       "stars": 4.5,
       "price": "145",
-      "img": "Also/Also01.png"
+      "img": "Also/Also01.png",
+      "category": "T-shirt",
+      "style": "Casual",
+      "color": "White",
+      "size": "Large"
     },
 
     {
@@ -91,7 +130,11 @@
       "title": "Polo with Tipping Details",
       "stars": 5,
       "price": "180",
-      "img": "Also/Also02.png"
+      "img": "Also/Also02.png",
+      "category": "T-shirt",
+      "style": "Casual",
+      "color": "Red",
+      "size": "Large"
     },
 
     {
@@ -101,7 +144,11 @@
       "price": "120",
       "oldprice": "$150",
       "discount": "30%",
-      "img": "Also/Also03.png"
+      "img": "Also/Also03.png",
+      "category": "T-shirt",
+      "style": "Casual",
+      "color": "White",
+      "size": "Small"
     }
   ],
 
