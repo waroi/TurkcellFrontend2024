@@ -4,6 +4,10 @@
   border-radius: 20px;
   border: 1px solid #ccc;
 
+  @media (max-width: 800px) {
+    border: none;
+  }
+
   .filter-section {
     margin-bottom: 20px;
 

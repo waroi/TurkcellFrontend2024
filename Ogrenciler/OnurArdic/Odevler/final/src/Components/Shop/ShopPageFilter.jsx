@@ -134,11 +134,10 @@ const ShopPageFilter = () => {
             </div>
           ))}
         </div>
+        <button className="apply-button" onClick={handleApplyFilters}>
+          Filtrele
+        </button>
       </div>
-
-      <button className="apply-button" onClick={handleApplyFilters}>
-        Filtrele
-      </button>
     </div>
   )
 }

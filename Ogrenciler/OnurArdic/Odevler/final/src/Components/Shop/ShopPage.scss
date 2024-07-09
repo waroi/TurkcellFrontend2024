@@ -7,52 +7,66 @@
     grid-template-columns: 20% 80%;
   }
 
-  .products {
-    margin-top: 30px;
-    @include flexible(flex);
-    flex-wrap: wrap;
-    gap: 1rem;
-    .product-card {
-      .img {
-        img {
-          width: 295px;
-          height: 298px;
-          border-radius: 20px;
-          object-fit: cover;
-        }
+  .products-wrapper {
+    .nav-sort {
+      position: absolute;
+      right: 10%;
+      top: -30px;
+      @include flexible(flex, flex-end, center);
+      .sort {
+        background-color: transparent;
+        border: none;
       }
+    }
+    .products {
+      position: relative;
+      margin-top: 30px;
+      @include flexible(flex);
+      flex-wrap: wrap;
+      gap: 1rem;
 
-      .product-content {
-        h5 {
-          @include typography('Satoshi', 20px, 1px);
+      .product-card {
+        .img {
+          img {
+            width: 295px;
+            height: 298px;
+            border-radius: 20px;
+            object-fit: cover;
+          }
         }
 
-        .stars {
-          color: gold;
-        }
-
-        .price-wrapper {
-          @include flexible(flex);
-          align-items: center;
-
-          p {
-            @include typography('Satoshi', 24px, 600, 22px);
-            margin: 10px 0;
-
-            span {
-              opacity: 0.5;
-              text-decoration: line-through;
-              margin-left: 5px;
-            }
+        .product-content {
+          h5 {
+            @include typography('Satoshi', 20px, 1px);
           }
 
-          .discount {
-            @include typography('Satoshi', 12px, 200, 22px);
-            @include padding(6px 14px);
-            border-radius: 62px;
-            color: #ff3333;
-            background-color: rgba(255, 51, 51, 0.1);
-            margin-left: 10px;
+          .stars {
+            color: gold;
+          }
+
+          .price-wrapper {
+            @include flexible(flex);
+            align-items: center;
+
+            p {
+              @include typography('Satoshi', 24px, 600, 22px);
+              margin: 10px 0;
+
+              span {
+                opacity: 0.5;
+                text-decoration: line-through;
+                margin-left: 5px;
+              }
+            }
+
+            .discount {
+              @include typography('Satoshi', 12px, 200, 22px);
+              @include padding(6px 14px);
+              border-radius: 62px;
+              color: #ff3333;
+              background-color: rgba(255, 51, 51, 0.1);
+              margin-left: 10px;
+            }
           }
         }
       }
