@@ -61,7 +61,7 @@ const Details = async ({ params }) => {
         </div>
 
         <div className="also-like-wrapper">
-          <h3>You might also like</h3>
+          <h4>You might also like</h4>
           <AlsoLike />
         </div>
       </section>
