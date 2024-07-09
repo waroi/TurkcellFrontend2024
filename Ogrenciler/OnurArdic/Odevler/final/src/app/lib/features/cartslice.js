@@ -1,11 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialState = {
-  cartItems: [],
-  selectedColor: null,
-  selectedSize: null,
-  totalPrice: 0,
-  totalDiscount: 0,
+const saveToLocalStorage = (key, value) => {
+  localStorage.setItem(key, JSON.stringify(value))
+}
+
+const loadFromLocalStorage = (key, defaultValue) => {
+  const storedValue = localStorage.getItem(key)
+  return storedValue ? JSON.parse(storedValue) : defaultValue
 }
 
 const calculateTotals = (cartItems) => {
@@ -24,6 +25,24 @@ const calculateTotals = (cartItems) => {
   })
 
   return { totalPrice, totalDiscount }
+}
+
+const initialState = {
+  cartItems: loadFromLocalStorage('cartItems', []),
+  selectedColor: null,
+  selectedSize: null,
+  totalPrice: loadFromLocalStorage('totalPrice', 0),
+  totalDiscount: loadFromLocalStorage('totalDiscount', 0),
+}
+
+const updateTotalsAndLocalStorage = (state) => {
+  const totals = calculateTotals(state.cartItems)
+  state.totalPrice = totals.totalPrice
+  state.totalDiscount = totals.totalDiscount
+
+  saveToLocalStorage('cartItems', state.cartItems)
+  saveToLocalStorage('totalPrice', state.totalPrice)
+  saveToLocalStorage('totalDiscount', state.totalDiscount)
 }
 
 const cartSlice = createSlice({
@@ -55,25 +74,17 @@ const cartSlice = createSlice({
         })
       }
 
-      const totals = calculateTotals(state.cartItems)
-      state.totalPrice = totals.totalPrice
-      state.totalDiscount = totals.totalDiscount
+      updateTotalsAndLocalStorage(state)
     },
     removeFromCart: (state, action) => {
       state.cartItems = state.cartItems.filter((item) => item.id !== action.payload)
-
-      const totals = calculateTotals(state.cartItems)
-      state.totalPrice = totals.totalPrice
-      state.totalDiscount = totals.totalDiscount
+      updateTotalsAndLocalStorage(state)
     },
     incrementQuantity: (state, action) => {
       state.cartItems = state.cartItems.map((item) =>
         item.id === action.payload ? { ...item, quantity: item.quantity + 1 } : item,
       )
-
-      const totals = calculateTotals(state.cartItems)
-      state.totalPrice = totals.totalPrice
-      state.totalDiscount = totals.totalDiscount
+      updateTotalsAndLocalStorage(state)
     },
     setSelectedColor: (state, action) => {
       state.selectedColor = action.payload
