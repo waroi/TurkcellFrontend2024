@@ -14,6 +14,7 @@
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
+    "sass": "^1.77.6",
     "styled-components": "^6.1.11"
   }
 }
