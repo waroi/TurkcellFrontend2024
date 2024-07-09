@@ -1,3 +1,4 @@
+import { formatDate } from '@/app/Hooks/formatDate'
 import { renderStars } from '@/app/Hooks/renderStar'
 
 const CommentsCard = ({ comment }) => {
@@ -11,7 +12,7 @@ const CommentsCard = ({ comment }) => {
           <i class="bi bi-check-circle-fill"></i>
         </h5>
         <p className="comments-text">"{comment.comment}"</p>
-        <p className="comments-date">Posted On {comment.date}</p>
+        <p className="comments-date">{formatDate(comment.date)}</p>
       </div>
     </div>
   )

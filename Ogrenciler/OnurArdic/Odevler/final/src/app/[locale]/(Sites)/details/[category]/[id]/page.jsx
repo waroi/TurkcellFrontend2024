@@ -7,6 +7,7 @@ import { renderStars } from '@/app/Hooks/renderStar'
 import { getComments } from '@/service/api'
 import ReviewsNav from '@/Components/Details/Reviews/ReviewsNav'
 import CommentSection from '@/Components/Details/Reviews/CommentSection'
+import AlsoLike from '@/Components/Details/AlsoLikeItems/AlsoLike'
 
 async function getProductDetail(category, id) {
   const res = await fetch(`http://localhost:3000/${category}/${id}`)
@@ -49,7 +50,7 @@ const Details = async ({ params }) => {
           </div>
         </div>
 
-        <section className="reviews-wrap">
+        <div className="reviews-wrap">
           <div className="reviews-wrapper">
             <div className="product-detail-nav">
               <ReviewsNav />
@@ -57,7 +58,12 @@ const Details = async ({ params }) => {
           </div>
 
           <CommentSection initialComments={initialComments} />
-        </section>
+        </div>
+
+        <div className="also-like-wrapper">
+          <h3>You might also like</h3>
+          <AlsoLike />
+        </div>
       </section>
     </>
   )
