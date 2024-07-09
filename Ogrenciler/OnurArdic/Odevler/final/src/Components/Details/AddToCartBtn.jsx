@@ -3,8 +3,10 @@
 import { useDispatch } from 'react-redux'
 import { addToCart } from '@/app/lib/features/cartslice'
 import toast from 'react-hot-toast'
+import { useTranslations } from 'next-intl'
 
 const AddToCartBtn = ({ data }) => {
+  const t = useTranslations('DetailPage')
   const dispatch = useDispatch()
   const handleAddToCart = () => {
     if (!data.selectedColor || !data.selectedSize) {
@@ -19,7 +21,7 @@ const AddToCartBtn = ({ data }) => {
     <div className="product-quantity">
       <input type="number" min="1" max="10" defaultValue="1" />
       <button className="add-to-cart-btn" onClick={handleAddToCart}>
-        Add to Cart
+        {t('AddToCart')}
       </button>
     </div>
   )

@@ -69,5 +69,19 @@
     "FooterLinksYoutube": "Youtube Playlist",
 
     "FooterReserved": "Shop.co © 2000-2023, All Rights Reserved"
+  },
+
+  "DetailPage": {
+    "AlsoLikeText": "You might also like",
+    "WriteReview": "Write a Review",
+    "AddToCart": "Add To Cart",
+    "Oldest": "Oldest",
+    "New": "New",
+    "SelecetColor": "Select Colors",
+    "SelectSize": "Select Size",
+    "Details": "Product Details",
+    "Reviews": "Reviews",
+    "FAQ": "FAQs",
+    "Close": "Close"
   }
 }

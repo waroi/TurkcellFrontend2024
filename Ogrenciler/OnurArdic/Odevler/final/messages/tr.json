@@ -67,5 +67,19 @@
     "FooterLinksDevelopment": "Geliştirme Eğitimi",
     "FooterLinksBlog": "Nasıl - Blog",
     "FooterLinksYoutube": "Youtube Playlist"
+  },
+
+  "DetailPage": {
+    "AlsoLikeText": "Bunları da beğenebilirsin",
+    "AddToCart": "Sepete Ekle",
+    "WriteReview": "Yorum Yap",
+    "Oldest": "Eskiden Yeniye",
+    "New": "Yeniden Eskiye",
+    "SelecetColor": "Renk",
+    "SelectSize": "Beden",
+    "Details": "Ürün Bilgileri",
+    "Reviews": "Yorumlar",
+    "FAQ": "Sıkça SS",
+    "Close": "Kapat"
   }
 }

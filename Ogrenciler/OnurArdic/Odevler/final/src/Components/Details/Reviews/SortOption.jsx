@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl'
 import { useState, useEffect } from 'react'
 
 const SortOption = ({ initialComments, setSortedComments }) => {
@@ -15,10 +16,11 @@ const SortOption = ({ initialComments, setSortedComments }) => {
     setSortedComments(sortCommentsByDate([...initialComments], sortOrder))
   }, [sortOrder, initialComments, setSortedComments])
 
+  const t = useTranslations('DetailPage')
   return (
     <select id="sort" value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
-      <option value="latest">Latest</option>
-      <option value="oldest">Oldest</option>
+      <option value="latest">{t('New')}</option>
+      <option value="oldest">{t('Oldest')}</option>
     </select>
   )
 }

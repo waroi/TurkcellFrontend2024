@@ -8,8 +8,10 @@ import {
   selectSelectedSize,
 } from '@/app/lib/features/cartslice'
 import AddToCartBtn from './AddToCartBtn'
+import { useTranslations } from 'next-intl'
 
 const ProductVariants = ({ data }) => {
+  const t = useTranslations('DetailPage')
   const dispatch = useDispatch()
   const selectedColor = useSelector(selectSelectedColor)
   const selectedSize = useSelector(selectSelectedSize)
@@ -25,7 +27,7 @@ const ProductVariants = ({ data }) => {
   return (
     <div className="product-variants">
       <div className="product-colors">
-        <p>Select Color</p>
+        <p>{t('SelecetColor')}</p>
         <div className="color-variants">
           {['red', 'blue', 'green'].map((color) => (
             <button
@@ -42,7 +44,7 @@ const ProductVariants = ({ data }) => {
       <hr />
 
       <div className="product-size">
-        <p>Select Size</p>
+        <p>{t('SelectSize')}</p>
         <div className="size-variants">
           {['SMALL', 'MEDIUM', 'LARGE', 'X-LARGE'].map((size) => (
             <button

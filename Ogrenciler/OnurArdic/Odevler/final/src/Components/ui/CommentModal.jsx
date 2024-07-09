@@ -1,12 +1,14 @@
 'use client'
 import { useState } from 'react'
 import './ui.scss'
+import { useTranslations } from 'next-intl'
 
 const CommentModal = ({ onCommentSubmit }) => {
   const [name, setName] = useState('')
   const [comment, setComment] = useState('')
   const [Star, setStar] = useState(1)
   const [showModal, setShowModal] = useState(false)
+  const t = useTranslations('DetailPage')
 
   const handleCommentSubmit = async () => {
     try {
@@ -43,12 +45,12 @@ const CommentModal = ({ onCommentSubmit }) => {
   return (
     <div>
       <button className="write-review-modal" onClick={() => setShowModal(true)}>
-        Write a Review
+        {t('WriteReview')}
       </button>
       {showModal && (
         <div className="modal-overlay">
           <div className="modal-content">
-            <h2>Write a Review</h2>
+            <h2> {t('WriteReview')}</h2>
             <input
               type="text"
               placeholder="Your Name"
@@ -71,10 +73,10 @@ const CommentModal = ({ onCommentSubmit }) => {
             </select>
             <div className="button-container">
               <button onClick={handleCommentSubmit} className="submit-button">
-                Submit
+                {t('WriteReview')}
               </button>
               <button onClick={() => setShowModal(false)} className="close-button">
-                Close
+                {t('Close')}
               </button>
             </div>
           </div>
