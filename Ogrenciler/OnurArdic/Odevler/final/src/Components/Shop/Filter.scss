@@ -59,13 +59,9 @@
         transform: scale(1.1);
       }
 
-      &.selected {
-        border: 2px solid #007bff;
-      }
-
       &.active {
-        background-color: #007bff;
-        color: #fff;
+        border: 2px solid #000;
+        transform: scale(1.2);
       }
     }
   }

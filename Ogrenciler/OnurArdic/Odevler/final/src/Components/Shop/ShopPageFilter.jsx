@@ -93,7 +93,7 @@ const ShopPageFilter = () => {
         <h3>Renkler</h3>
         <hr />
         <div className="colors">
-          {['red', 'blue', 'green', 'yellow', 'black'].map((color) => (
+          {['Red', 'Blue', 'Green', 'Yellow', 'Black'].map((color) => (
             <div
               key={color}
               className={`color ${selectedColors.includes(color) ? 'active' : ''}`}
