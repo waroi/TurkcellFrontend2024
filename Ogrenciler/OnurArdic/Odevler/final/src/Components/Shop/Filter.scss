@@ -62,6 +62,11 @@
       &.selected {
         border: 2px solid #007bff;
       }
+
+      &.active {
+        background-color: #007bff;
+        color: #fff;
+      }
     }
   }
 
@@ -78,7 +83,7 @@
       transition: background-color 0.3s;
       border-radius: 50px;
 
-      &.selected {
+      &.active {
         background-color: #007bff;
         color: #fff;
       }
@@ -96,7 +101,7 @@
       border-radius: 3px;
       transition: background-color 0.3s;
 
-      &.selected {
+      &.active {
         background-color: #007bff;
         color: #fff;
       }

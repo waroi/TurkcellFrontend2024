@@ -1,37 +1,106 @@
-import React from 'react'
+'use client'
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import {
+  setCategories,
+  setPriceRange,
+  setColors,
+  setSizes,
+  setStyles,
+} from '../../app/lib/features/filterslice'
 import './Filter.scss'
 
 const ShopPageFilter = () => {
+  const dispatch = useDispatch()
+
+  const [selectedCategories, setSelectedCategories] = useState([])
+  const [selectedPriceRange, setSelectedPriceRange] = useState([0, 1000])
+  const [selectedColors, setSelectedColors] = useState([])
+  const [selectedSizes, setSelectedSizes] = useState([])
+  const [selectedStyles, setSelectedStyles] = useState([])
+
+  const handleCategoryClick = (category) => {
+    const updatedCategories = selectedCategories.includes(category)
+      ? selectedCategories.filter((item) => item !== category)
+      : [...selectedCategories, category]
+    setSelectedCategories(updatedCategories)
+  }
+
+  const handleColorClick = (color) => {
+    const updatedColors = selectedColors.includes(color)
+      ? selectedColors.filter((item) => item !== color)
+      : [...selectedColors, color]
+    setSelectedColors(updatedColors)
+  }
+
+  const handleSizeClick = (size) => {
+    const updatedSizes = selectedSizes.includes(size)
+      ? selectedSizes.filter((item) => item !== size)
+      : [...selectedSizes, size]
+    setSelectedSizes(updatedSizes)
+  }
+
+  const handleStyleClick = (style) => {
+    const updatedStyles = selectedStyles.includes(style)
+      ? selectedStyles.filter((item) => item !== style)
+      : [...selectedStyles, style]
+    setSelectedStyles(updatedStyles)
+  }
+
+  const handleApplyFilters = () => {
+    dispatch(setCategories(selectedCategories))
+    dispatch(setPriceRange(selectedPriceRange))
+    dispatch(setColors(selectedColors))
+    dispatch(setSizes(selectedSizes))
+    dispatch(setStyles(selectedStyles))
+  }
+
   return (
     <div className="shop-page-filter">
       <div className="filter-section">
         <h3>Ürün Filtreleme</h3>
         <hr />
         <div className="categories">
-          <div className="category active">T-shirt</div>
-          <div className="category">Shorts</div>
-          <div className="category">Shirts</div>
-          <div className="category">Hoodie</div>
-          <div className="category">Jeans</div>
+          {['T-shirt', 'Shorts', 'Shirts', 'Hoodie', 'Jeans'].map((category) => (
+            <div
+              key={category}
+              className={`category ${selectedCategories.includes(category) ? 'active' : ''}`}
+              onClick={() => handleCategoryClick(category)}
+            >
+              {category}
+            </div>
+          ))}
         </div>
       </div>
 
       <div className="filter-section">
         <h3>Fiyat Aralığı</h3>
         <hr />
-        <input type="range" min="0" max="1000" className="price-range" />
-        <div className="price-range-value">$0 - $1000</div>
+        <input
+          type="range"
+          min="0"
+          max="1000"
+          value={selectedPriceRange}
+          className="price-range"
+          onChange={(e) => setSelectedPriceRange([0, e.target.value])}
+        />
+        <div className="price-range-value">
+          ${selectedPriceRange[0]} - ${selectedPriceRange[1]}
+        </div>
       </div>
 
       <div className="filter-section">
         <h3>Renkler</h3>
         <hr />
         <div className="colors">
-          <div className="color" style={{ backgroundColor: 'red' }}></div>
-          <div className="color" style={{ backgroundColor: 'blue' }}></div>
-          <div className="color" style={{ backgroundColor: 'green' }}></div>
-          <div className="color" style={{ backgroundColor: 'yellow' }}></div>
-          <div className="color" style={{ backgroundColor: 'black' }}></div>
+          {['red', 'blue', 'green', 'yellow', 'black'].map((color) => (
+            <div
+              key={color}
+              className={`color ${selectedColors.includes(color) ? 'active' : ''}`}
+              style={{ backgroundColor: color }}
+              onClick={() => handleColorClick(color)}
+            ></div>
+          ))}
         </div>
       </div>
 
@@ -39,10 +108,15 @@ const ShopPageFilter = () => {
         <h3>Size</h3>
         <hr />
         <div className="sizes">
-          <div className="size">Small</div>
-          <div className="size">Medium</div>
-          <div className="size">Large</div>
-          <div className="size">X-Large</div>
+          {['Small', 'Medium', 'Large', 'X-Large'].map((size) => (
+            <div
+              key={size}
+              className={`size ${selectedSizes.includes(size) ? 'active' : ''}`}
+              onClick={() => handleSizeClick(size)}
+            >
+              {size}
+            </div>
+          ))}
         </div>
       </div>
 
@@ -50,14 +124,21 @@ const ShopPageFilter = () => {
         <h3>Dress Style</h3>
         <hr />
         <div className="styles">
-          <div className="style">Casual</div>
-          <div className="style">Formal</div>
-          <div className="style">Party</div>
-          <div className="style">Gym</div>
+          {['Casual', 'Formal', 'Party', 'Gym'].map((style) => (
+            <div
+              key={style}
+              className={`style ${selectedStyles.includes(style) ? 'active' : ''}`}
+              onClick={() => handleStyleClick(style)}
+            >
+              {style}
+            </div>
+          ))}
         </div>
       </div>
 
-      <button className="apply-button">Filtrele</button>
+      <button className="apply-button" onClick={handleApplyFilters}>
+        Filtrele
+      </button>
     </div>
   )
 }

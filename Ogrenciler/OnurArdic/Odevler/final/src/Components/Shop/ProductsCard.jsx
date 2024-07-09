@@ -1,4 +1,6 @@
-import Link from 'next/link'
+'use client'
+import { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 import ProductImage from './ProductImage'
 import { renderStars } from '@/app/Hooks/renderStar'
 
@@ -24,18 +26,42 @@ export async function getAllData() {
 
     return combinedData
   } catch (error) {
-    toast.error('Error fetching data:', error)
+    console.error('Error fetching data:', error)
     throw error
   }
 }
 
-const ProductsCard = async () => {
-  const { arrival, topSelling, alsolike } = await getAllData()
+const ProductsCard = () => {
+  const filters = useSelector((state) => state.filters)
+  const [data, setData] = useState({ arrival: [], topSelling: [], alsolike: [] })
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const allData = await getAllData()
+      setData(allData)
+    }
+
+    fetchData()
+  }, [])
+
+  const filteredProducts = (products) =>
+    products.filter((product) => {
+      const categoryMatch = filters.categories.length
+        ? filters.categories.includes(product.category)
+        : true
+      const priceMatch =
+        product.price >= filters.priceRange[0] && product.price <= filters.priceRange[1]
+      const colorMatch = filters.colors.length ? filters.colors.includes(product.color) : true
+      const sizeMatch = filters.sizes.length ? filters.sizes.includes(product.size) : true
+      const styleMatch = filters.styles.length ? filters.styles.includes(product.style) : true
+
+      return categoryMatch && priceMatch && colorMatch && sizeMatch && styleMatch
+    })
 
   return (
     <>
-      {arrival.map((item) => (
-        <div className="product-card">
+      {filteredProducts(data.arrival).map((item) => (
+        <div className="product-card" key={item.id}>
           <ProductImage item={item} category={'arrival'} />
 
           <div className="product-content">
@@ -52,8 +78,8 @@ const ProductsCard = async () => {
         </div>
       ))}
 
-      {topSelling.map((item) => (
-        <div className="product-card">
+      {filteredProducts(data.topSelling).map((item) => (
+        <div className="product-card" key={item.id}>
           <ProductImage item={item} category={'topSelling'} />
 
           <div className="product-content">
@@ -70,8 +96,8 @@ const ProductsCard = async () => {
         </div>
       ))}
 
-      {alsolike.map((item) => (
-        <div className="product-card">
+      {filteredProducts(data.alsolike).map((item) => (
+        <div className="product-card" key={item.id}>
           <ProductImage item={item} category={'alsolike'} />
 
           <div className="product-content">

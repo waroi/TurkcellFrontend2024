@@ -2,7 +2,6 @@ import { useLocale } from 'next-intl'
 import Link from 'next/link'
 
 const ProductImage = ({ category, item }) => {
-  console.log(item)
   const locale = useLocale()
   return (
     <Link href={`/${locale}/details/${category}/${item.id}`}>
