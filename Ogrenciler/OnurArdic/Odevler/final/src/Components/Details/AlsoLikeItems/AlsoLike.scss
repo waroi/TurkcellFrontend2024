@@ -5,10 +5,29 @@
     @include typography('Integral CF Regular', 48px, 700, 3px);
     @include padding(40px 0px);
     text-align: center;
+
+    @media (max-width: 900px) {
+      @include typography('Integral CF Regular', 20px);
+    }
   }
   .also-like-card {
     @include flexible(flex, space-between, center);
+    gap: 10px;
+    @media (max-width: 900px) {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+    }
     .product-card {
+      @media (max-width: 768px) {
+        .product-card {
+          flex: 0 0 auto;
+          margin-right: 16px;
+          scroll-snap-align: start;
+        }
+      }
       .img {
         img {
           width: 295px;
