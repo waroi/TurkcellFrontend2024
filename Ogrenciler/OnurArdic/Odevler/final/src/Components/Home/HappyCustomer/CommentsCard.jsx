@@ -9,7 +9,7 @@ const CommentsCard = ({ comment }) => {
       <div className="comments-content">
         <h5 className="comments-username">
           {comment.name}
-          <i class="bi bi-check-circle-fill"></i>
+          <i className="bi bi-check-circle-fill"></i>
         </h5>
         <p className="comments-text">"{comment.comment}"</p>
         <p className="comments-date">{formatDate(comment.date)}</p>

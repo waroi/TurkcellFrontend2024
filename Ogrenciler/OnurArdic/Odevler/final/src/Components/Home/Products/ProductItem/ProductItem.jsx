@@ -9,10 +9,10 @@ const ProductItem = async () => {
   return (
     <>
       {Arrival.map((item) => (
-        <div className="product-card">
+        <div className="product-card" key={item.id}>
           <Link href={`/${locale}/details/arrival/${item.id}`}>
             <div className="img">
-              <img src={item.img} alt={item.title} />
+              <img src={`/${item.img} `} alt={item.title} />
             </div>
           </Link>
 
