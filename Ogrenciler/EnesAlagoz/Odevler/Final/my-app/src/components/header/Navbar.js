@@ -1,80 +1,51 @@
 import Link from "next/link";
+import styles from "./Navbar.module.scss"; // SCSS dosyasını import et
 
-const Navbar = () => {
+const Navbar = ({ toggleMenu, isMenuOpen, toggleSidebar }) => {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
-        <Link href="/" className="navbar-brand">
-          Navbar
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link href="/" className="nav-link active" aria-current="page">
-                Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link href="#" className="nav-link">
-                Link
-              </Link>
-            </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Dropdown
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <Link href="#" className="dropdown-item">
-                    Action
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="dropdown-item">
-                    Another action
-                  </Link>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <Link href="#" className="dropdown-item">
-                    Something else here
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item">
-              <p className="nav-link " aria-disabled="true">
-                Disabled
-              </p>
-            </li>
-          </ul>
-          <form className="d-flex" role="search">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success" type="submit">
-              Search
+    <div className={styles.nav}>
+      <nav className={styles.navbar}>
+        <div className={styles["navbar-wrapper"]}>
+          <div className={styles.logo}>
+            <Link href="/">SHOP.CO</Link>
+          </div>
+
+          <div className={`${styles["navbar-links"]} `}>
+            <Link href="/shop" className={styles["nav-link"]}>
+              LinkShop
+            </Link>
+            <Link href="/onsale" className={styles["nav-link"]}>
+              LinkOnSale
+            </Link>
+            <Link href="/arrivals" className={styles["nav-link"]}>
+              LinkArrivals
+            </Link>
+            <Link href="/brands" className={styles["nav-link"]}>
+              Brands
+            </Link>
+            <div className={styles["navbar-search"]}>
+              <i className="bi bi-search"></i>
+              <input type="text" placeholder="Search" className={styles["search-input"]} />
+            </div>
+            <div className={styles["buttons-wrapper"]}>
+              <button className={styles["theme-button"]}>ThemeButton</button>
+            </div>
+          </div>
+
+          <div className={styles["user-buttons"]}>
+            <button className={styles["search-btn"]}>
+              <i className="bi bi-search"></i>
             </button>
-          </form>
+            <button className={styles["cart-btn"]} onClick={toggleSidebar}>
+              <i className="bi bi-cart-plus"></i>
+            </button>
+            <Link href="/auth/login" className={styles["login-btn"]}>
+              <i className="bi bi-person-circle"></i>
+            </Link>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 };
 
