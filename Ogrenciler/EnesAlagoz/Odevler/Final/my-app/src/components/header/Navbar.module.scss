@@ -1,96 +1,89 @@
-.nav {
-  min-width: 1440px;
-  display: flex;
-  justify-content: center;
-  .navbar {
-    max-width: 1240px;
-    background-color: #e71d1d;
-    padding: 10px;
+.navbar {
+  max-width: 100%;
+  background-color: #e9aaaa;
+  padding: 10px;
 
-    // navbar için diğer stil özellikleri
-    .navbar-wrapper {
+  .navbar-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85px;
+    .logo {
+      font-size: 1.5rem;
+      // logo için diğer stil özellikleri
+      .logo-image {
+        max-height: 50px; // Logo resminin maksimum yüksekliği
+        width: auto; // Logo resminin genişliği
+      }
+    }
+
+    .navbar-links {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      // navbar-wrapper için diğer stil özellikleri
-      .logo {
-        font-size: 1.5rem;
-        // logo için diğer stil özellikleri
-        a {
-          color: white; // Link rengi
-          text-decoration: none; // Link altı çizgi kaldırma
+      .nav-link {
+        margin-right: 15px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .navbar-search {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+
+      input[type="text"] {
+        margin-left: 5px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        &:focus {
+          outline: none;
+          border-color: #333;
+        }
+      }
+    }
+
+    .buttons-wrapper {
+      // buttons-wrapper için diğer stil özellikleri
+      .theme-button {
+        background-color: #007bff; // ThemeButton arka plan rengi
+        color: white; // ThemeButton yazı rengi
+        border: none; // ThemeButton kenar çizgisi
+        padding: 8px 16px; // ThemeButton iç içe alan
+        border-radius: 5px; // ThemeButton kenar yuvarlaklığı
+        cursor: pointer; // ThemeButton imleç stili
+        &:hover {
+          background-color: #0056b3; // ThemeButton üzerine gelince arka plan rengi
+        }
+      }
+    }
+
+    .user-buttons {
+      display: flex;
+      align-items: center;
+      // user-buttons için diğer stil özellikleri
+      .search-btn,
+      .cart-btn {
+        background-color: transparent; // Search ve Cart button arka plan rengi
+        border: none; // Search ve Cart button kenar çizgisi
+        cursor: pointer; // Search ve Cart button imleç stili
+        margin-left: 10px; // Search ve Cart button ile arasında boşluk
+        &:hover {
+          color: #007bff; // Search ve Cart button üzerine gelince yazı rengi
         }
       }
 
-      .navbar-links {
-        display: flex;
-        align-items: center;
-        // navbar-links için diğer stil özellikleri
-        .nav-link {
-          margin-right: 15px; // Navbar linkleri arası boşluk
-          color: white; // Navbar link rengi
-          text-decoration: none; // Navbar link altı çizgi kaldırma
-          &:hover {
-            text-decoration: underline; // Navbar link üzerine gelince altı çizgi
-          }
-        }
-      }
-
-      .navbar-search {
-        margin-left: auto; // Sağa yasla
-        display: flex;
-        align-items: center;
-        // navbar-search için diğer stil özellikleri
-        input[type="text"] {
-          margin-left: 5px; // Input ile simge arası boşluk
-          padding: 5px; // Input iç içe alan
-          border-radius: 5px; // Input kenar yuvarlaklığı
-          border: 1px solid #ccc; // Input kenar çizgisi
-          font-size: 14px; // Input yazı boyutu
-          &:focus {
-            outline: none; // Input odaklandığında outline kaldırma
-            border-color: #333; // Input odaklandığında kenar çizgi rengi
-          }
-        }
-      }
-
-      .buttons-wrapper {
-        // buttons-wrapper için diğer stil özellikleri
-        .theme-button {
-          background-color: #007bff; // ThemeButton arka plan rengi
-          color: white; // ThemeButton yazı rengi
-          border: none; // ThemeButton kenar çizgisi
-          padding: 8px 16px; // ThemeButton iç içe alan
-          border-radius: 5px; // ThemeButton kenar yuvarlaklığı
-          cursor: pointer; // ThemeButton imleç stili
-          &:hover {
-            background-color: #0056b3; // ThemeButton üzerine gelince arka plan rengi
-          }
-        }
-      }
-
-      .user-buttons {
-        display: flex;
-        align-items: center;
-        // user-buttons için diğer stil özellikleri
-        .search-btn,
-        .cart-btn {
-          background-color: transparent; // Search ve Cart button arka plan rengi
-          border: none; // Search ve Cart button kenar çizgisi
-          cursor: pointer; // Search ve Cart button imleç stili
-          margin-left: 10px; // Search ve Cart button ile arasında boşluk
-          &:hover {
-            color: #007bff; // Search ve Cart button üzerine gelince yazı rengi
-          }
-        }
-
-        .login-btn {
-          color: white; // Login button yazı rengi
-          text-decoration: none; // Login button altı çizgi kaldırma
-          margin-left: 10px; // Login button ile arasında boşluk
-          &:hover {
-            text-decoration: underline; // Login button üzerine gelince altı çizgi
-          }
+      .login-btn {
+        color: white; // Login button yazı rengi
+        text-decoration: none; // Login button altı çizgi kaldırma
+        margin-left: 10px; // Login button ile arasında boşluk
+        &:hover {
+          text-decoration: underline; // Login button üzerine gelince altı çizgi
         }
       }
     }
