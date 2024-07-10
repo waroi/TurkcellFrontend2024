@@ -1,4 +1,5 @@
-import { NavbarContainer } from "@/Styled/Global";
+import { NavbarContainer } from "./Navbar.jsx";
+import styles from "./Navbar.module.scss";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -7,8 +8,6 @@ const Navbar = () => {
       <div>
         <Link href="/">Anasayfa</Link>
         <Link href="/category">Kategoriler</Link>
-      </div>
-      <div>
         <Link href="/cart">Sepet</Link>
         <Link href="/auth/login">Giriş</Link>
       </div>

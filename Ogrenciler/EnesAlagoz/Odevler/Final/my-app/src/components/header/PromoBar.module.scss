@@ -1,0 +1,20 @@
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+
+.promo-bar {
+  font-family: "Satoshi", sans-serif;
+
+  .promo-message {
+    font-size: 14px;
+    color: #fff;
+
+    a {
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 14px;
+      color: #ffffff;
+    }
+  }
+}
