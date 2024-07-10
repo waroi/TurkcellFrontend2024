@@ -1,0 +1,17 @@
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+
+.bgBodyTertiary {
+  background-color: #f0f0f0;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #0070f3;
+    text-decoration: none;
+  }
+}
