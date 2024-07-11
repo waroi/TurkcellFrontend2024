@@ -97,14 +97,14 @@ const Header = () => {
 
           {user ? (
             <button className="cart-btn" onClick={toggleSidebar}>
-              <i className="bi bi-cart-plus"></i>
+              <i className="bi bi-cart"></i>
             </button>
           ) : (
             ''
           )}
 
           {user ? (
-            <button className="cart-btn" onClick={logoutHandle}>
+            <button className="logout-btn" onClick={logoutHandle}>
               <i className="bi bi-box-arrow-left"></i>
             </button>
           ) : (

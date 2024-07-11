@@ -97,6 +97,7 @@
     }
 
     .user-buttons {
+      @include flexible(flex, center);
       font-size: 24px;
       a {
         margin-left: 10px;
@@ -122,6 +123,11 @@
       i {
         font-size: 24px;
       }
+    }
+
+    .logout-btn {
+      @extend .cart-btn;
+      margin-top: 2px;
     }
   }
 }
