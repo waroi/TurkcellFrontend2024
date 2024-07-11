@@ -9,6 +9,11 @@ import ReviewsNav from '@/Components/Details/Reviews/ReviewsNav'
 import CommentSection from '@/Components/Details/Reviews/CommentSection'
 import AlsoLike from '@/Components/Details/AlsoLikeItems/AlsoLike'
 
+export const generateMetadata = ({ params }) => {
+  return {
+    title: `SHOP.CO / Product Details / ${params.id}`,
+  }
+}
 async function getProductDetail(category, id) {
   const res = await fetch(`http://localhost:3000/${category}/${id}`)
 

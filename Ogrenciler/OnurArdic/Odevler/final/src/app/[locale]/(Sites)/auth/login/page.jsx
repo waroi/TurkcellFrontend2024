@@ -9,6 +9,7 @@ import Link from 'next/link'
 import toast from 'react-hot-toast'
 import './login.scss'
 import { useLocale } from 'next-intl'
+
 const LoginForm = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState(null)

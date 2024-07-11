@@ -7,6 +7,7 @@ import toast from 'react-hot-toast'
 import { Register } from '@/firebase'
 import './sign.scss'
 import { useLocale } from 'next-intl'
+
 const SignUpForm = () => {
   const [onMail, setOnMail] = useState('')
   const [onPassword, setPassword] = useState('')
