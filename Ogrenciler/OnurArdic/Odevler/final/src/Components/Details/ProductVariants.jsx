@@ -29,7 +29,7 @@ const ProductVariants = ({ data }) => {
       <div className="product-colors">
         <p>{t('SelecetColor')}</p>
         <div className="color-variants">
-          {['red', 'blue', 'green'].map((color) => (
+          {['red', 'blue', 'green', 'white', 'black'].map((color) => (
             <button
               key={color}
               className={`variant-btn ${selectedColor === color ? 'selected' : ''}`}
