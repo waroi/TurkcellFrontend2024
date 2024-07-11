@@ -27,22 +27,42 @@ const AddToCartBtn = ({ data }) => {
     dispatch(addToCart(cartItem))
   }
 
+  const handleIncrement = () => {
+    if (quantity < 10) {
+      setQuantity((prevQuantity) => prevQuantity + 1)
+    }
+  }
+
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity((prevQuantity) => prevQuantity - 1)
+    }
+  }
+
+  const handleChange = (e) => {
+    const value = e.target.value
+    if (/^\d*$/.test(value)) {
+      setQuantity(Number(value))
+    }
+  }
+
   return (
     <div className="product-quantity">
-      <input
-        type="number"
-        min="1"
-        max="10"
-        value={quantity}
-        onChange={(e) => setQuantity(Number(e.target.value))}
-      />
-
+      <div className="quantity-input">
+        <button onClick={handleDecrement} className="quantity-btn decrement">
+          <i className="bi bi-dash"></i>
+        </button>
+        <input type="text" value={quantity} onChange={handleChange} />
+        <button onClick={handleIncrement} className="quantity-btn increment">
+          <i className="bi bi-plus"></i>
+        </button>
+      </div>
       {user ? (
         <button className="add-to-cart-btn" onClick={handleAddToCart}>
           {t('AddToCart')}
         </button>
       ) : (
-        <p>Ürünü satın almak için giriş yapınız</p>
+        <p className="alert">Ürünü satın almak için giriş yapınız</p>
       )}
     </div>
   )
