@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {
   setCategories,
   setPriceRange,
@@ -94,7 +94,6 @@ const ShopPageFilter = () => {
               type="range"
               min="0"
               max="1000"
-              value={selectedPriceRange}
               className="price-range"
               onChange={(e) => setSelectedPriceRange([0, e.target.value])}
             />

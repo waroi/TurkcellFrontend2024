@@ -3,15 +3,19 @@
 import { useRouter } from 'next/navigation'
 import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { setLocale } from '../../../app/lib/features/localeslice'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import './Navbar.scss'
 import ThemeButton from '@/Components/ui/ThemeButton'
 import Cart from './Cart'
+import { Logout } from '@/firebase'
+import { logout } from '@/app/lib/features/authslice'
+import toast from 'react-hot-toast'
 
 const Header = () => {
+  const user = useSelector((state) => state.auth.user)
   const router = useRouter()
   const pathname = usePathname()
   const dispatch = useDispatch()
@@ -44,6 +48,11 @@ const Header = () => {
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen)
+  }
+
+  const logoutHandle = async () => {
+    dispatch(logout(false))
+    toast.success('Logout successful')
   }
   const t = useTranslations('Navbar')
   return (
@@ -86,12 +95,24 @@ const Header = () => {
           <button className="search">
             <i className="bi bi-search"></i>
           </button>
-          <button className="cart-btn" onClick={toggleSidebar}>
-            <i className="bi bi-cart-plus"></i>
-          </button>
-          <Link href={createLocalizedLink('/auth/login')} className="login-btn">
-            <i className="bi bi-person-circle"></i>
-          </Link>
+
+          {user ? (
+            <button className="cart-btn" onClick={toggleSidebar}>
+              <i className="bi bi-cart-plus"></i>
+            </button>
+          ) : (
+            ''
+          )}
+
+          {user ? (
+            <button className="cart-btn" onClick={logoutHandle}>
+              <i className="bi bi-box-arrow-left"></i>
+            </button>
+          ) : (
+            <Link href={createLocalizedLink('/auth/login')} className="login-btn">
+              <i className="bi bi-person-circle"></i>
+            </Link>
+          )}
         </div>
       </div>
       <Cart isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
