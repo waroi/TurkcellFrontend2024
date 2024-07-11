@@ -13,7 +13,7 @@ const ThemeButton = () => {
 
   return (
     <button className="theme-btn" onClick={handleToggleTheme}>
-      {theme === 'light' ? 'dark' : 'light'}
+      {theme === 'light' ? '🌞' : '🌑'}
     </button>
   )
 }

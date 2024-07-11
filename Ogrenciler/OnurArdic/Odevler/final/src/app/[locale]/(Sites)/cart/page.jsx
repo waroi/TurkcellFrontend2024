@@ -4,17 +4,20 @@ import '../../../../Components/Cart/Cart.scss'
 
 const Cart = () => {
   return (
-    <section className="cart-page">
-      <div className="cart-wrapper container">
-        <div className="cart-left">
-          <CartLeft />
-        </div>
+    <>
+      <div className="line"></div>
+      <section className="cart-page">
+        <div className="cart-wrapper container">
+          <div className="cart-left">
+            <CartLeft />
+          </div>
 
-        <div className="cart-right">
-          <CartRight />
+          <div className="cart-right">
+            <CartRight />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }
 

@@ -1,0 +1,78 @@
+@import '../../../../../Components/Home/Home.scss';
+
+$primary-color: #160603;
+$secondary-color: #2c3e50;
+$background-color: #f4f4f4;
+$text-color: #333;
+$border-radius: 5px;
+
+@mixin button-style($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+.login {
+  height: 100vh;
+  @include flexible(flex, center, center);
+  flex-direction: column;
+  font-family: 'Satoshi';
+
+  .login-wrapper {
+    padding: 40px;
+    border-radius: $border-radius;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .card {
+    text-align: center;
+    @include flexible(flex, center, center);
+    flex-direction: column;
+
+    .title {
+      font-size: 2rem;
+      color: $primary-color;
+      margin-bottom: 20px;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid $text-color;
+        border-radius: $border-radius;
+        font-size: 1rem;
+      }
+
+      button {
+        @include button-style($primary-color, #fff);
+      }
+    }
+
+    .sign-text {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: $secondary-color;
+
+      a {
+        color: $primary-color;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+  }
+}

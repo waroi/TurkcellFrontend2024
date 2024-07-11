@@ -81,5 +81,17 @@
     "Reviews": "Yorumlar",
     "FAQ": "Sıkça SS",
     "Close": "Kapat"
+  },
+
+  "CartPage": {
+    "CartTitle": "Sepetim",
+    "CartEmpty": "Sepetinizde ürün bulunmamaktadır.",
+    "CartTotal": "Toplam",
+    "Discount": "İndirim",
+    "Total": "Toplam",
+    "Size": "Beden",
+    "Color": "Renk",
+    "Price": "Fiyat",
+    "Summary": "Sipariş Özeti"
   }
 }

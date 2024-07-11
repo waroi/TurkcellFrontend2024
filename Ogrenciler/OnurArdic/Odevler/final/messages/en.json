@@ -83,5 +83,17 @@
     "Reviews": "Reviews",
     "FAQ": "FAQs",
     "Close": "Close"
+  },
+
+  "CartPage": {
+    "CartTitle": "Your Cart",
+    "CartTotal": "Subtotal",
+    "CartEmpty": "There are no items in your cart ",
+    "Discount": "Discount",
+    "Total": "Total Price: ",
+    "Size": "Size",
+    "Color": "Color",
+    "Price": "Price",
+    "Summary": "Order Summary"
   }
 }

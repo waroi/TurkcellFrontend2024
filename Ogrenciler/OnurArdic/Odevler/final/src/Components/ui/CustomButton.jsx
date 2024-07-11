@@ -1,7 +1,13 @@
-import React from 'react'
+import { useLocale } from 'next-intl'
+import Link from 'next/link'
 
 const CustomButton = ({ text }) => {
-  return <button className="custom-btn">{text}</button>
+  const locale = useLocale()
+  return (
+    <Link href={`${locale}/shop`} className="custom-btn">
+      {text}
+    </Link>
+  )
 }
 
 export default CustomButton

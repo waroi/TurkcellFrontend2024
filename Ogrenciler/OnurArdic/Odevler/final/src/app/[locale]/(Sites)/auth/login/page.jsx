@@ -7,12 +7,15 @@ import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Link from 'next/link'
 import toast from 'react-hot-toast'
+import './login.scss'
+import { useLocale } from 'next-intl'
 const LoginForm = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState(null)
   const user = useSelector((state) => state.auth.user)
   const dispatch = useDispatch()
   const router = useRouter()
+  const locale = useLocale()
 
   const handleLogin = async (e) => {
     try {
@@ -38,8 +41,8 @@ const LoginForm = () => {
   return (
     <section className="login">
       <div className="login-wrapper ">
-        <div className="login-card">
-          <h1 className="login-title">Login</h1>
+        <div className="card">
+          <h1 className="title">Login</h1>
           <form onSubmit={handleLogin} className="login-form">
             <input
               type="email"
@@ -54,7 +57,7 @@ const LoginForm = () => {
             <button type="submit">Giriş Yap</button>
 
             <p className="sign-text">
-              Hesabın yok mu ? <Link href="/Signup">Kayıt Ol</Link>
+              Hesabın yok mu ? <Link href={`/${locale}/auth/signup`}>Kayıt Ol</Link>
             </p>
           </form>
         </div>
