@@ -1,7 +1,10 @@
 import CartLeft from '@/Components/Cart/CartLeft'
 import CartRight from '@/Components/Cart/CartRight'
 import '../../../../Components/Cart/Cart.scss'
-
+export const metadata = {
+  title: 'SHOP.CO / Cart',
+  description: 'The best clothes',
+}
 const Cart = () => {
   return (
     <>

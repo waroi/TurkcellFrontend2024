@@ -2,6 +2,10 @@ import ShopPageFilter from '@/Components/Shop/ShopPageFilter'
 import '../../../../Components/Shop/ShopPage.scss'
 import ProductsCard from '@/Components/Shop/ProductsCard'
 
+export const metadata = {
+  title: 'SHOP.CO / Shop',
+  description: 'The best clothes',
+}
 const ShopPage = async () => {
   return (
     <section className="shop-page">
