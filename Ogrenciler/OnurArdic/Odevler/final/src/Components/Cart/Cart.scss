@@ -82,7 +82,14 @@
             }
 
             .quantity-input {
-              position: relative;
+              position: absolute;
+              right: 0;
+              bottom: 10px;
+
+              @media (max-width: 900px) {
+                top: -15px;
+                right: 0;
+              }
             }
 
             .decrement {
