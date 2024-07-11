@@ -192,6 +192,13 @@ $x30: 30px;
   }
 
   .reviews-wrap {
+    .load-more-reviews {
+      @include typography('Satoshi', 14px, 500, 3px);
+      border: 1px solid #ccc;
+      background-color: transparent;
+      padding: 15px 20px;
+      border-radius: 62px;
+    }
     .sort-btn {
       margin-top: 10px;
       @include flexible(flex, flex-end);
