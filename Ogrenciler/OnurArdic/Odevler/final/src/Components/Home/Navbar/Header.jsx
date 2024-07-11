@@ -10,7 +10,6 @@ import { useTranslations } from 'next-intl'
 import './Navbar.scss'
 import ThemeButton from '@/Components/ui/ThemeButton'
 import Cart from './Cart'
-import { Logout } from '@/firebase'
 import { logout } from '@/app/lib/features/authslice'
 import toast from 'react-hot-toast'
 
@@ -75,9 +74,9 @@ const Header = () => {
 
         <div className={`navbar-links ${isMenuOpen ? 'open' : ''}`}>
           <Link href={createLocalizedLink('/shop')}>{t('LinkShop')}</Link>{' '}
-          <Link href={createLocalizedLink('/onsale')}>{t('LinkOnSale')}</Link>
-          <Link href={createLocalizedLink('/arrivals')}>{t('LinkArrivals')}</Link>
-          <Link href={createLocalizedLink('/brands')}>{t('Brands')}</Link>
+          <Link href={createLocalizedLink('/shop')}>{t('LinkOnSale')}</Link>
+          <Link href={createLocalizedLink('/shop')}>{t('LinkArrivals')}</Link>
+          <Link href={createLocalizedLink('/shop')}>{t('Brands')}</Link>
           <div className="navbar-search">
             <i className="bi bi-search"></i>
             <input type="text" placeholder={t('Search')} />
