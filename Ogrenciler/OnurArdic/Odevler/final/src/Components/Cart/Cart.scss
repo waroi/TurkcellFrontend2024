@@ -60,6 +60,7 @@
           .cart-btn {
             @include flexible(flex);
             flex-direction: column;
+            align-items: stretch;
             gap: 2rem;
             .remove {
               border: none;
@@ -72,19 +73,34 @@
             }
 
             input {
-              @include padding(2px 15px);
+              width: 130px;
+              @include padding(10px 0px);
+              background-color: #f0f0f0;
               border: none;
-              border: 1px solid #000;
-              border-radius: 4px;
               text-align: center;
-              position: absolute;
-              bottom: 24px;
-              right: 15px;
+              border-radius: 62px;
+            }
 
-              @media (max-width: 900px) {
-                right: 0%;
-                bottom: 94%;
-              }
+            .quantity-input {
+              position: relative;
+            }
+
+            .decrement {
+              position: absolute;
+              left: 7%;
+              top: 0px;
+              border: none;
+              background-color: transparent;
+              font-size: 30px;
+            }
+
+            .increment {
+              position: absolute;
+              right: 7%;
+              top: 0px;
+              border: none;
+              background-color: transparent;
+              font-size: 30px;
             }
           }
         }

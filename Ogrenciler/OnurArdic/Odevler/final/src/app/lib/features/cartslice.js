@@ -87,6 +87,21 @@ const cartSlice = createSlice({
       )
       updateTotalsAndLocalStorage(state)
     },
+    decrementQuantity: (state, action) => {
+      state.cartItems = state.cartItems.map((item) =>
+        item.id === action.payload && item.quantity > 1
+          ? { ...item, quantity: item.quantity - 1 }
+          : item,
+      )
+      updateTotalsAndLocalStorage(state)
+    },
+    updateQuantity: (state, action) => {
+      const { id, quantity } = action.payload
+      state.cartItems = state.cartItems.map((item) =>
+        item.id === id ? { ...item, quantity } : item,
+      )
+      updateTotalsAndLocalStorage(state)
+    },
     setSelectedColor: (state, action) => {
       state.selectedColor = action.payload
     },
@@ -96,8 +111,15 @@ const cartSlice = createSlice({
   },
 })
 
-export const { addToCart, removeFromCart, incrementQuantity, setSelectedColor, setSelectedSize } =
-  cartSlice.actions
+export const {
+  addToCart,
+  removeFromCart,
+  incrementQuantity,
+  decrementQuantity,
+  updateQuantity,
+  setSelectedColor,
+  setSelectedSize,
+} = cartSlice.actions
 export default cartSlice.reducer
 export const selectCartItems = (state) => state.cart.cartItems
 export const selectSelectedColor = (state) => state.cart.selectedColor

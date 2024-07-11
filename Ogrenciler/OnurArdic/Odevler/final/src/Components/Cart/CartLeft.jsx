@@ -1,21 +1,37 @@
 'use client'
 import { useDispatch, useSelector } from 'react-redux'
 import './Cart.scss'
-import { incrementQuantity, removeFromCart } from '@/app/lib/features/cartslice'
+import {
+  incrementQuantity,
+  decrementQuantity,
+  removeFromCart,
+  updateQuantity,
+} from '@/app/lib/features/cartslice'
 import { useTranslations } from 'next-intl'
 
 const CartLeft = () => {
   const cartItems = useSelector((state) => state.cart.cartItems)
   const dispatch = useDispatch()
+  const t = useTranslations('CartPage')
+
   const deleteItem = (id) => {
     dispatch(removeFromCart(id))
   }
 
-  const changeQuantityHande = (quantity) => {
-    dispatch(incrementQuantity(quantity))
+  const handleIncrement = (id) => {
+    dispatch(incrementQuantity(id))
   }
 
-  const t = useTranslations('CartPage')
+  const handleDecrement = (id) => {
+    dispatch(decrementQuantity(id))
+  }
+
+  const handleChange = (id, value) => {
+    if (/^\d*$/.test(value) && Number(value) >= 1 && Number(value) <= 10) {
+      dispatch(updateQuantity({ id, quantity: Number(value) }))
+    }
+  }
+
   return (
     <div className="cart-left">
       <h4>{t('CartTitle')}</h4>
@@ -48,11 +64,25 @@ const CartLeft = () => {
                   <button className="remove" onClick={() => deleteItem(cartItem.id)}>
                     <i className="bi bi-trash"></i>
                   </button>
-                  <input
-                    type="number"
-                    value={cartItem.quantity}
-                    onChange={() => changeQuantityHande(cartItem.quantity)}
-                  />
+                  <div className="quantity-input">
+                    <button
+                      onClick={() => handleDecrement(cartItem.id)}
+                      className="quantity-btn decrement"
+                    >
+                      <i className="bi bi-dash"></i>
+                    </button>
+                    <input
+                      type="text"
+                      value={cartItem.quantity}
+                      onChange={(e) => handleChange(cartItem.id, e.target.value)}
+                    />
+                    <button
+                      onClick={() => handleIncrement(cartItem.id)}
+                      className="quantity-btn increment"
+                    >
+                      <i className="bi bi-plus"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             ))
