@@ -9,9 +9,11 @@ import {
   setStyles,
 } from '../../app/lib/features/filterslice'
 import './Filter.scss'
+import { useTranslations } from 'next-intl'
 
 const ShopPageFilter = () => {
   const dispatch = useDispatch()
+  const t = useTranslations('Shop')
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
@@ -69,7 +71,7 @@ const ShopPageFilter = () => {
       <div className={`shop-page-filter ${isMenuOpen ? 'open' : ''}`}>
         <div className="filter-menu">
           <div className="filter-section">
-            <h3>Ürün Filtreleme</h3>
+            <h3>{t('filter')}</h3>
             <button className="deleteSide" onClick={closeMenu}>
               <i className="bi bi-x-circle"></i>
             </button>
@@ -88,7 +90,7 @@ const ShopPageFilter = () => {
           </div>
 
           <div className="filter-section">
-            <h3>Fiyat Aralığı</h3>
+            <h3>{t('price')}</h3>
             <hr />
             <input
               type="range"
@@ -103,7 +105,7 @@ const ShopPageFilter = () => {
           </div>
 
           <div className="filter-section">
-            <h3>Renkler</h3>
+            <h3>{t('color')}</h3>
             <hr />
             <div className="colors">
               {['Red', 'Blue', 'Green', 'Yellow', 'Black'].map((color) => (
@@ -118,7 +120,7 @@ const ShopPageFilter = () => {
           </div>
 
           <div className="filter-section">
-            <h3>Size</h3>
+            <h3>{t('size')}</h3>
             <hr />
             <div className="sizes">
               {['Small', 'Medium', 'Large', 'X-Large'].map((size) => (
@@ -134,7 +136,7 @@ const ShopPageFilter = () => {
           </div>
 
           <div className="filter-section">
-            <h3>Dress Style</h3>
+            <h3>{t('style')}</h3>
             <hr />
             <div className="styles">
               {['Casual', 'Formal', 'Party', 'Gym'].map((style) => (
@@ -148,7 +150,7 @@ const ShopPageFilter = () => {
               ))}
             </div>
             <button className="apply-button" onClick={handleApplyFilters}>
-              Filtrele
+              {t('filterBtn')}
             </button>
           </div>
         </div>

@@ -95,5 +95,14 @@
     "Color": "Color",
     "Price": "Price",
     "Summary": "Order Summary"
+  },
+
+  "Shop": {
+    "filter": "Filter Products",
+    "price": "Price Range",
+    "color": "Colors",
+    "size": "Size",
+    "style": "Dress Style",
+    "filterBtn": "Filter"
   }
 }

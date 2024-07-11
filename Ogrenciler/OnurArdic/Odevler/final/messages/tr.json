@@ -93,5 +93,14 @@
     "Color": "Renk",
     "Price": "Fiyat",
     "Summary": "Sipariş Özeti"
+  },
+
+  "Shop": {
+    "filter": "Ürünleri Filtrele",
+    "price": "Fiyat Aralığı",
+    "color": "Renkler",
+    "size": "Beden",
+    "style": "Kıyafet Tarzı",
+    "filterBtn": "Filtrele"
   }
 }
