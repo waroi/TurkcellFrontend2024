@@ -77,7 +77,7 @@ const ShopPageFilter = () => {
             </button>
             <hr />
             <div className="categories">
-              {['T-shirt', 'Shorts', 'Shirts', 'Hoodie', 'Jeans'].map((category) => (
+              {['T-shirt', 'Shorts', 'Shirt', 'Hoodie', 'Jeans'].map((category) => (
                 <div
                   key={category}
                   className={`category ${selectedCategories.includes(category) ? 'active' : ''}`}
