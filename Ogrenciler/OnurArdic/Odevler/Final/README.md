@@ -28,4 +28,4 @@ bun dev
 -Kullanıcılar, açık ve koyu tema arasında geçiş yapabilirler.
 
 Proje : SCSS ve NeXTJS ile geliştirilmiştir.
-Kullanılan diğer teknolojiler : i18n, firebase, redux toolkit.
+Kullanılan diğer teknolojiler : i18n, firebase, redux toolkit, formik, yup
