@@ -35,7 +35,7 @@ Filtrelemede fiyata göre filtreleme için "apply filter" butonuna basılmalıd�
 Diğer filtreler üzerine tıklandığı anda çalışmaktadır.
 Shop sayfası üzerinde ürünleri aynı anda filtreleyerek sıralama işlemi yapabilirsiniz. 
 
-Ürün detay sayfasında yorum yapma aktif bir şekilde çalışmaktadır.
+Ürün detay sayfasında yorum yapma aktif bir şekilde çalışmaktadır. 6 taneden fazla yorum var ise "load more" butonu gelir.
 Login değilseniz komponentimiz açılır fakat yorum yapmak için gerekli inputlar ekrana bastırılmaz. Login sayfasına yönlendirmek için buton gelir.
 
 Her kullanıcının sepet bilgisi ayrı olarak tutulmaktadır. Kullanıcı giriş yaptıktan sonra var ise sepet bilgisi yüklenir.
