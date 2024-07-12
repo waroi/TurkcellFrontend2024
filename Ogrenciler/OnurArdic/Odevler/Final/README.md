@@ -29,3 +29,5 @@ bun dev
 
 Proje : SCSS ve NeXTJS ile geliştirilmiştir.
 Kullanılan diğer teknolojiler : i18n, firebase, redux toolkit, formik, yup
+
+Projenin Figma Tasarımı İçin : https://www.figma.com/design/wODGuTGGQEmiEuiOIyXtIX/E-commerce-Website-Template-(Freebie)-(Community)?node-id=31-32&t=XdJOFd510mVP6LMl-0
