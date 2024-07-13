@@ -1,0 +1,56 @@
+@import url(https://db.onlinewebfonts.com/c/b52804ac57ef6e90d2826a6b0f111133?family=Integral+CF+Bold);
+@import url("https://fonts.googleapis.com/css2?family=Satoshi:wght@400;700&display=swap");
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --navbar-background-color: #ffffff;
+  --navbar-border-color: #e0e0e0;
+  --navbar-text-color: #000000;
+  --search-bar-background-color: #f1f1f1;
+  --link-hover-color: #0070f3;
+  --navbar-discount-background-color: #000000;
+  --navbar-discount-text-color: #ffffff;
+  --navbar-discount-link-color: #ffffff;
+}
+
+[data-theme="dark"] {
+  --background-color: #000000;
+  --text-color: #ffffff;
+  --navbar-background-color: #000000;
+  --navbar-border-color: #000000;
+  --navbar-text-color: #ffffff;
+  --search-bar-background-color: #000000;
+  --link-hover-color: #66aaff;
+  --navbar-discount-background-color: #000000;
+  --navbar-discount-text-color: #ffffff;
+  --navbar-discount-link-color: #ffffff;
+}
+
+body {
+  font-family: "Satoshi", sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.custom-container {
+  width: 100%;
+  background-color: var(--background-color);
+
+  .inner-container {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+}
+
+a {
+  color: var(--text-color) !important;
+  text-decoration: none !important;
+  transition: color 0.3s;
+
+  &:hover {
+    color: var(--link-hover-color);
+  }
+}

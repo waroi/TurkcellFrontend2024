@@ -1,0 +1,67 @@
+.customer-reviews {
+  max-width: 1240px;
+  margin: 5.5rem auto 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  .title {
+    font-family: "Integral CF Bold", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 57.6px;
+    text-align: left;
+    @media (max-width: 769px) {
+      font-size: 28px;
+      line-height: 30.4px;
+    }
+  }
+  .icons {
+    display: flex;
+    gap: 1rem;
+    @media (max-width: 769px) {
+      display: none;
+    }
+  }
+}
+.customer-reviews-container {
+  max-width: 1240px;
+  margin: 2.5rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+  @media (max-width: 769px) {
+    margin: 2.5rem 0;
+    overflow: scroll;
+  }
+  .comment-card {
+    padding: 2rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+    @media (max-width: 769px) {
+      padding: 1rem;
+      width: 350px;
+      margin-left: 1rem;
+    }
+    .comment-card-title {
+      display: flex;
+      align-items: center;
+      h2 {
+        font-family: "Satoshi", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 22px;
+        text-align: left;
+        margin-top: 1rem;
+        margin-bottom: 0.8rem;
+      }
+    }
+    .comment-desc {
+      font-family: "Satoshi", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      color: #00000099;
+      line-height: 22px;
+      text-align: left;
+    }
+  }
+}

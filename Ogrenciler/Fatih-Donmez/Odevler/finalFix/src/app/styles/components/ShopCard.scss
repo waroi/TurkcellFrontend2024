@@ -1,0 +1,130 @@
+.shop-card {
+  width: 300px;
+  height: 380px;
+  border-radius: 20px;
+  text-align: left;
+  background-color: #fff;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  .shop-image-container {
+    position: relative;
+    width: 100%;
+
+    min-height: 300px;
+    height: 300px;
+    img {
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  }
+
+  .shop-title {
+    font-size: 1.25rem;
+    margin-top: 1rem;
+    font-family: "Satoshi", sans-serif;
+    font-weight: 700;
+    flex: 1;
+  }
+
+  .shop-rating {
+    color: #ff9800;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    max-height: 19px;
+    display: flex;
+
+    p {
+      margin-left: 0.6rem;
+      height: 1.25rem;
+      margin-top: 1px;
+      color: #000000;
+      line-height: 1.1rem;
+      font-family: "Satoshi", sans-serif;
+      font-weight: 400;
+      font-size: 0.8rem;
+
+      span {
+        color: #00000099;
+      }
+    }
+  }
+
+  .product-price {
+    .current-price {
+      font-size: 1.5rem;
+      font-family: "Satoshi", sans-serif;
+      font-weight: 700;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #888;
+      margin-left: 0.5rem;
+      font-size: 1.5rem;
+      font-family: "Satoshi", sans-serif;
+      font-weight: 700;
+    }
+
+    .discount {
+      background-color: #ff33331a;
+      color: #ff3333;
+      padding: 0.4rem 0.8rem;
+      border-radius: 62px;
+      margin-left: 0.5rem;
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 170px !important;
+    height: 250px !important;
+    margin: 0 auto 2rem;
+    padding: 0.5rem;
+
+    .product-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .shop-image-container {
+      height: 170px !important;
+      min-height: 170px !important;
+    }
+    .product-title {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .product-rating {
+      font-size: 0.5rem;
+      margin-top: 0.3rem;
+    }
+
+    .product-price {
+      margin-top: 0.3rem;
+
+      .current-price,
+      .old-price {
+        font-size: 1.2rem;
+      }
+
+      .discount {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+      }
+    }
+  }
+}

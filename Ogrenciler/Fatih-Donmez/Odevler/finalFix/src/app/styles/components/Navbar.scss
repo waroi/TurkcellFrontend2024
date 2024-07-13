@@ -1,0 +1,191 @@
+@import "~bootstrap/scss/bootstrap";
+.signup-nav {
+  color: white !important;
+  text-decoration: underline !important;
+}
+.navbar-discount {
+  background-color: var(--navbar-discount-background-color);
+  color: var(--navbar-discount-text-color);
+  text-align: center;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  @media (max-width: 768px) {
+    padding: 0.5rem 0.5rem;
+  }
+
+  .discount-content {
+    max-width: 1240px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    @media screen and (max-width: 768px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  a {
+    color: var(--navbar-discount-link-color);
+    text-decoration: underline;
+    margin-left: 0.5rem;
+  }
+
+  .close-btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--navbar-discount-text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    @media screen and (max-width: 768px) {
+    }
+  }
+}
+
+.navbar-custom {
+  background-color: var(--navbar-background-color);
+  padding: 0.5rem 1rem;
+  margin: 1.5rem 0rem;
+  border-bottom: 1px solid var(--navbar-border-color);
+  display: flex;
+  justify-content: space-between !important;
+  @media screen and (max-width: 768px) {
+    justify-content: start;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Integral CF Bold", sans-serif;
+    color: var(--navbar-text-color);
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    margin-left: 2.5rem;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: 768px) {
+      display: none;
+      margin-left: 0 !important;
+    }
+    a {
+      text-decoration: none;
+      color: var(--navbar-text-color);
+      font-family: "Satoshi", sans-serif;
+      &:hover {
+        color: var(--link-hover-color);
+      }
+    }
+
+    &.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: var(--navbar-background-color);
+      border-top: 1px solid var(--navbar-border-color);
+      z-index: 10;
+      padding: 1rem;
+
+      a {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--search-bar-background-color);
+    border-radius: 1.5rem;
+    padding: 0.5rem 1rem;
+    margin-left: 2.5rem;
+    flex: 0.7;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+    input {
+      border: none;
+      background: transparent;
+      outline: none;
+      padding: 0 0.5rem;
+      width: 100%; /* Use the full available width */
+      font-family: "Satoshi", sans-serif;
+      color: var(--navbar-text-color);
+    }
+  }
+
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+    .toggle-theme {
+      cursor: pointer;
+      color: var(--navbar-text-color);
+      font-family: "Satoshi", sans-serif;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      &:hover {
+        color: var(--link-hover-color);
+      }
+
+      &::before {
+        content: "☀️";
+      }
+
+      &[data-theme="dark"]::before {
+        content: "🌙";
+      }
+    }
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .search-bar {
+    max-width: 400px; /* Set a max-width for medium screens */
+  }
+}
+
+.mobile-hamburger-menu {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    justify-content: space-between;
+    cursor: pointer;
+    color: var(--navbar-text-color);
+    font-size: 1.5rem;
+  }
+  .shoplogo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 30px;
+    font-family: "Integral CF Bold", sans-serif;
+    color: var(--navbar-text-color);
+  }
+  .hamburger-logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}

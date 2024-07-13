@@ -1,0 +1,151 @@
+.hero-container {
+  width: 100%;
+  height: 100vh;
+  min-height: 680px;
+  overflow: hidden;
+  background-image: url("/heroBg.png");
+  background-size: cover;
+  background-position: center;
+  @media (max-width: 768px) {
+    display: none;
+  }
+  .hero-text {
+    h1 {
+      font-family: "Integral CF Bold", sans-serif;
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 4rem;
+      margin-top: 6.5rem;
+    }
+    p {
+      font-family: "Satoshi", sans-serif;
+      font-size: 1rem;
+      margin-top: 2rem;
+      font-weight: 400;
+      line-height: 1.5rem;
+      color: #00000099;
+      max-width: 555px;
+    }
+
+    button {
+      margin-top: 2rem;
+      padding: 0.75rem 2rem;
+      font-family: "Satoshi", sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+      background-color: #000000;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #333333;
+      }
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 3rem;
+      width: 100%;
+
+      .stat-item {
+        text-align: left;
+        padding: 0 2rem 0 0;
+        border-right: 1px solid #00000033;
+
+        h3 {
+          font-family: "Satoshi", sans-serif;
+          font-size: 2.5rem;
+          font-weight: 700;
+          line-height: 3.25rem;
+          margin: 0;
+        }
+
+        p {
+          font-family: "Satoshi", sans-serif;
+          font-size: 1rem;
+          font-weight: 400;
+          margin: 0;
+          color: #00000099;
+        }
+      }
+    }
+  }
+}
+.hero-mobile-container {
+  @media (min-width: 769px) {
+    display: none;
+  }
+  background-color: #f2f0f1;
+  padding: 2.5rem 1rem;
+  .hero-mobile-title {
+    font-family: "Integral CF Bold", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 34px;
+    text-align: left;
+  }
+  .hero-mobile-desc {
+    font-family: "Satoshi", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: #00000099;
+  }
+  .hero-mobile-btn {
+    padding: 1rem 3.5rem;
+    width: 100%;
+    background: #000000;
+    color: white;
+    border: none;
+    border-radius: 62px;
+    font-family: "Satoshi", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21.6px;
+  }
+  .stats {
+    margin-top: 1.5rem;
+    .stat-group {
+      display: flex;
+      justify-content: space-between;
+      .stat-item1 {
+        padding: 0 2rem 0 0;
+        border-right: 1px solid #00000033;
+        h3 {
+          font-family: "Satoshi", sans-serif;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 32.4px;
+          text-align: left;
+        }
+      }
+      .stat-item {
+        h3 {
+          font-family: "Satoshi", sans-serif;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 32.4px;
+          text-align: left;
+        }
+      }
+    }
+  }
+  .stat-item3 {
+    margin: 0.5rem auto;
+    text-align: center;
+    width: 100%;
+  }
+}
+.hero-mobile-img {
+  @media (min-width: 769px) {
+    display: none;
+  }
+
+  width: 100%;
+}

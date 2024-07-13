@@ -1,0 +1,36 @@
+{
+  "title": "Welcome to SHOP.CO",
+  "shop": "Shop",
+  "onSale": "On Sale",
+  "newArrivals": "New Arrivals",
+  "topSelling": "Top Selling",
+  "brands": "Brands",
+  "searchPlaceholder": "Search for products...",
+  "toggleTheme": "Toggle Theme",
+  "toSecondPage": "Go to second page",
+  "viewAll": "View All",
+  "navbar": {
+    "discountMessage": "Sign up and get 20% off your first order.",
+    "signUpNow": "Sign Up Now",
+    "shop": "Shop",
+    "onSale": "On Sale",
+    "newArrivals": "New Arrivals",
+    "brands": "Brands",
+    "searchPlaceholder": "Search for products..."
+  },
+  "hero": {
+    "title": "FIND CLOTHES THAT MATCHES YOUR STYLE",
+    "subtitle": "Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.",
+    "shop": "Shop Now",
+    "stats": {
+      "brands": "International Brands",
+      "products": "High-Quality Products",
+      "customers": "Happy Customers"
+    },
+    "counts": {
+      "brands": "200+",
+      "products": "2,000+",
+      "customers": "30,000+"
+    }
+  }
+}

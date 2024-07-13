@@ -1,0 +1,119 @@
+.breadcrumb {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  .casual {
+    font-family: "Satoshi", "sans-serif";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21.6px;
+    text-align: left;
+    color: black;
+  }
+}
+.cart-grid {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 20px;
+  .cart-products {
+    margin-top: 1.5rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+    padding: 1.25rem 1.5rem;
+    .cart-order-card {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid #e5e5e5;
+      .card-left-part {
+        display: flex;
+        .product-details {
+          h3 {
+            font-family: "Satoshi";
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 27px;
+            text-align: left;
+            color: #000000;
+          }
+          p {
+            font-family: "Satoshi";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18.9px;
+            span {
+              font-family: "Satoshi";
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 18.9px;
+              color: #00000099;
+            }
+          }
+          h1 {
+            font-family: "Satoshi";
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 32.4px;
+            text-align: left;
+          }
+        }
+      }
+      .img-container {
+        height: 150px;
+        position: relative;
+        width: 150px;
+        margin-right: 10px;
+
+        img {
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  .order-summary {
+    border: 1px solid #e5e5e5;
+    padding: 1.5rem 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 20px;
+    .order-title {
+      font-family: "Satoshi";
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32.4px;
+    }
+    .subtotal {
+      color: #00000099;
+      font-family: "Satoshi";
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 27px;
+      text-align: left;
+    }
+    .ptsub {
+      padding-top: 1.5rem;
+    }
+    .total-part {
+      border-top: 1px solid #e5e5e5;
+      padding-top: 1.5rem;
+    }
+    .right-bold {
+      font-family: "Satoshi";
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 27px;
+      text-align: right;
+    }
+    .checkout-btn {
+      width: 100%;
+      padding: 1rem 3.5rem;
+      background: #000000;
+      border-radius: 62px;
+      color: white;
+      font-family: Satoshi;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 21.6px;
+    }
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "arrival": [
+    {
+      "id": "1",
+      "title": "T-shirt with Tape Details",
+      "stars": 4,
+      "price": "120",
+      "img": "products/arrival00.png"
+    },
+    {
+      "id": "2",
+      "title": "Skinny Fit Jeans",
+      "stars": 5,
+      "price": "240",
+      "oldprice": "$260",
+      "discount": "20%",
+      "img": "products/arrival01.png"
+    },
+    {
+      "id": "3",
+      "title": "Checkered Shirt",
+      "stars": 3,
+      "price": "180",
+      "img": "products/arrival02.png"
+    },
+    {
+      "id": "4",
+      "title": "Sleeve Striped T-shirt",
+      "stars": 3,
+      "price": "130",
+      "oldprice": "$160",
+      "discount": "30%",
+      "img": "products/arrival03.png"
+    }
+  ],
+  "topSelling": [
+    {
+      "id": "5",
+      "title": "Vertical Striped Shirt",
+      "stars": 5,
+      "price": "212",
+      "oldprice": "$252",
+      "discount": "20%",
+      "img": "products/TopSelling/selling00.png"
+    },
+    {
+      "id": "6",
+      "title": "Courage Graphic T-shirt",
+      "stars": 3,
+      "price": "145",
+      "img": "products/TopSelling/selling02.png"
+    },
+    {
+      "id": "7",
+      "title": "Loose Fit Bermuda Shorts",
+      "stars": 4,
+      "price": "80",
+      "img": "products/TopSelling/selling02.png"
+    },
+    {
+      "id": "8",
+      "title": "Faded Skınny Jeans",
+      "stars": 5,
+      "price": "210",
+      "img": "products/TopSelling/selling03.png"
+    }
+  ],
+  "Comments": [
+    {
+      "id": "1",
+      "Star": 5,
+      "name": "Sarah M.",
+      "comment": "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+      "day": 15,
+      "month": "June",
+      "year": 2024
+    },
+    {
+      "id": "2",
+      "Star": 5,
+      "name": "Alex K.",
+      "comment": "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.",
+      "day": 22,
+      "month": "June",
+      "year": 2024
+    },
+    {
+      "id": "3",
+      "Star": 5,
+      "name": "James L.",
+      "comment": "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.",
+      "day": 5,
+      "month": "July",
+      "year": 2024
+    },
+    {
+      "id": "4",
+      "Star": 4,
+      "name": "Emily R.",
+      "comment": "Shop.co has a fantastic collection. The delivery was prompt and the quality of the clothes is excellent.",
+      "day": 10,
+      "month": "July",
+      "year": 2024
+    },
+    {
+      "id": "5",
+      "Star": 4,
+      "name": "Michael T.",
+      "comment": "Great shopping experience with Shop.co. The clothes fit perfectly and are very comfortable.",
+      "day": 18,
+      "month": "July",
+      "year": 2024
+    },
+    {
+      "id": "6",
+      "Star": 5,
+      "name": "Olivia W.",
+      "comment": "Absolutely love the styles offered by Shop.co. The quality is top-notch and the prices are reasonable.",
+      "day": 25,
+      "month": "July",
+      "year": 2024
+    },
+    {
+      "id": "7",
+      "Star": 5,
+      "name": "William H.",
+      "comment": "Shop.co is my go-to for fashion. The variety and quality are impressive, and I always find something I love.",
+      "day": 1,
+      "month": "August",
+      "year": 2024
+    },
+    {
+      "id": "8",
+      "Star": 4,
+      "name": "Emma J.",
+      "comment": "I'm very satisfied with my purchases from Shop.co. The customer service is excellent and the clothes are beautiful.",
+      "day": 8,
+      "month": "August",
+      "year": 2024
+    },
+    {
+      "id": "9",
+      "Star": 5,
+      "name": "Liam B.",
+      "comment": "The selection at Shop.co is fantastic. The clothes are stylish and high-quality. Highly recommend!",
+      "day": 15,
+      "month": "August",
+      "year": 2024
+    },
+    {
+      "id": "10",
+      "Star": 4,
+      "name": "Sophia C.",
+      "comment": "I had a great experience shopping at Shop.co. The clothes are fashionable and the prices are good.",
+      "day": 22,
+      "month": "August",
+      "year": 2024
+    },
+    {
+      "id": "190",
+      "name": "asdfasdf",
+      "comment": "asdfsdaf",
+      "stars": 5,
+      "day": 10,
+      "month": "August",
+      "year": 2024
+    },
+    {
+      "id": "282",
+      "name": "Fatih DÖNMEZ",
+      "comment": "Çok güzeldi her şey için thx varol hocam <3",
+      "stars": 5,
+      "day": 10,
+      "month": "August",
+      "year": 2024
+    }
+  ],
+  "Products": [
+    {
+      "id": "1",
+      "title": "Gradient Graphic T-shirt",
+      "stars": 4,
+      "price": 120,
+      "desc": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "img": "products/prod00.png",
+      "cat": "T-Shirts",
+      "dressStyle": "Casual",
+      "colors": ["red", "blue", "green"],
+      "sizes": ["S", "M", "L"]
+    },
+    {
+      "id": "2",
+      "title": "Polo with Tipping Details",
+      "stars": 5,
+      "price": 240,
+      "oldprice": "$260",
+      "desc": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "discount": "20%",
+      "img": "products/prod01.png",
+      "cat": "Jeans",
+      "dressStyle": "Casual",
+      "colors": ["black", "blue"],
+      "sizes": ["M", "L", "XL"]
+    },
+    {
+      "id": "3",
+      "title": "Black Striped T-shirt",
+      "stars": 3,
+      "price": 180,
+      "desc": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "img": "products/prod02.png",
+      "cat": "Shirts",
+      "dressStyle": "Casual",
+      "colors": ["white", "black"],
+      "sizes": ["M", "L", "XL"]
+    },
+    {
+      "id": "4",
+      "title": "Skinny Fit Jeans",
+      "stars": 3,
+      "price": 130,
+      "oldprice": "$160",
+      "desc": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "discount": "30%",
+      "img": "products/prod03.png",
+      "cat": "T-Shirts",
+      "dressStyle": "Casual",
+      "colors": ["yellow", "green"],
+      "sizes": ["S", "M"]
+    },
+    {
+      "id": "5",
+      "title": "Checkered Shirt",
+      "stars": 5,
+      "price": 212,
+      "oldprice": "$252",
+      "desc": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "discount": "20%",
+      "img": "products/prod04.png",
+      "cat": "Shirts",
+      "dressStyle": "Casual",
+      "colors": ["blue", "white"],
+      "sizes": ["M", "L"]
+    },
+    {
+      "id": "6",
+      "title": "Sleeve Striped T-shirt",
+      "stars": 3,
+      "price": 145,
+      "desc": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "img": "products/prod05.png",
+      "cat": "T-Shirts",
+      "dressStyle": "Casual",
+      "colors": ["red", "black"],
+      "sizes": ["M", "L", "XL"]
+    },
+    {
+      "id": "7",
+      "title": "Vertical Striped Shirt",
+      "stars": 4,
+      "price": 80,
+      "desc": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "img": "products/prod06.png",
+      "cat": "Shorts",
+      "dressStyle": "Casual",
+      "colors": ["green", "black"],
+      "sizes": ["S", "M", "L"]
+    },
+    {
+      "id": "8",
+      "title": "Courage Graphic T-shirt",
+      "stars": 5,
+      "price": 210,
+      "desc": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "img": "products/prod07.png",
+      "cat": "Jeans",
+      "dressStyle": "Casual",
+      "colors": ["blue", "black"],
+      "sizes": ["M", "L", "XL"]
+    },
+    {
+      "id": "9",
+      "title": "Loose Fit Bermuda Shorts",
+      "stars": 3.5,
+      "price": 145,
+      "desc": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+      "img": "products/prod08.png",
+      "cat": "T-Shirts",
+      "dressStyle": "Casual",
+      "colors": ["red", "blue", "green"],
+      "sizes": ["S", "M", "L"]
+    }
+  ]
+}
