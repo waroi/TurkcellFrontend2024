@@ -4,6 +4,11 @@ Shop.co'ya hoş geldiniz, bir online alışveriş deneyimi sunmak için tasarlan
 
 ## Kurulum
 
+Test Hesapları:
+
+- abdullah@gmail.com 123456
+- bilal@gmail.com 123456
+
 Canlı projeye erişmek için:
 https://turkcell-final-shopco.vercel.app/en
 
