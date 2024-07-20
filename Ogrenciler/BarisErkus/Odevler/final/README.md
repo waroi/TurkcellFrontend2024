@@ -32,5 +32,5 @@
      ```
   4. Aşağıdaki komutu çalıştırarak JSON sunucusunu başlatınız:
      ```sh
-     json-server --watch db.json --port 3002
+     json-server --watch db.json --port 3001
      ```
