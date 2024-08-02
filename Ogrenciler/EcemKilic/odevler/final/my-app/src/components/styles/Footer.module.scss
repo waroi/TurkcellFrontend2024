@@ -1,0 +1,79 @@
+.footerContainer {
+    padding: 20px;
+    background: #f8f8f8;
+  }
+  
+  .newsletter {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    background: #ddd;
+  }
+  
+  .newsletterLeft {
+    flex: 1;
+  }
+  
+  .newsletterTitle {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .newsletterRight {
+    display: flex;
+    align-items: center;
+  }
+  
+  .newsletterRightBg {
+    padding: 10px;
+    margin-left: 10px;
+  }
+  
+  .rectangle {
+    background: #333;
+    color: #fff;
+    padding: 40px 0;
+  }
+  
+  .footerTitle {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .footerText {
+    margin: 20px 0;
+  }
+  
+  .social {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .footerSubtitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .footerList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footerListItem {
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  .footerLine {
+    margin: 40px 0;
+    border-color: #555;
+  }
+  
+  .footerEndText {
+    font-size: 14px;
+  }
+  

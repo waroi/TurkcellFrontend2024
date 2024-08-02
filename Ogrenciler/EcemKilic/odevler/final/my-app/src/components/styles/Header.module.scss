@@ -1,0 +1,53 @@
+.navbar {
+    background: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Integral CF Bold';
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.menuItem {
+    font-family: 'Satoshi Light';
+    font-size: 16px;
+    color: #000000;
+}
+
+.searchInput {
+    padding: 12px 16px;
+    border-radius: 62px;
+    border: none;
+    background-color: #f0f0f0;
+}
+
+.sortSelect {
+    padding: 12px 16px;
+    border-radius: 62px;
+    border: none;
+    background-color: #f0f0f0;
+    margin-left: 10px;
+}
+
+.iconContainer {
+    display: flex;
+    gap: 14px;
+}
+
+.icon {
+    font-size: 24px;
+    color: #000000;
+}
+  

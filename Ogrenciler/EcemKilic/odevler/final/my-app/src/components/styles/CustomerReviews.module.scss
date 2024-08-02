@@ -1,0 +1,17 @@
+.customerReviews {
+    padding: 20px;
+  }
+  
+  .reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .reviewCard {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    margin: 10px;
+  }
+  

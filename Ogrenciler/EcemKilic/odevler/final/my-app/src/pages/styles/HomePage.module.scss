@@ -1,0 +1,36 @@
+.homePageContainer {
+    padding: 20px;
+    text-align: center;
+  
+    .productList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+  
+    .productCard {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 5px;
+      width: 200px;
+      text-align: center;
+  
+      img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px;
+      }
+  
+      .viewDetailsButton {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+    }
+  }
+  

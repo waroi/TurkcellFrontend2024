@@ -1,0 +1,34 @@
+.productDetailContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .productImage img {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .productInfo {
+      padding: 20px;
+      text-align: center;
+    }
+  
+    .productColors span,
+    .productSizes span {
+      display: inline-block;
+      margin: 5px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  }
+  
+  .commentsSection {
+    margin-top: 20px;
+    width: 100%;
+  
+    h2 {
+      text-align: center;
+    }
+  }
+  
