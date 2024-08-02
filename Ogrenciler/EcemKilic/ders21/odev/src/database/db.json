@@ -1,36 +1,36 @@
 {
   "toDoList": [
     {
-      "id": "cdd3",
-      "content": "To Do List",
-      "deadline": "2024-05-29",
-      "addingDate": "29.05.2024 16:03",
-      "updatedDate": "29.05.2024 16:17",
-      "updateStatus": 2
-    },
-    {
-      "id": "79eb",
-      "content": "Bootcamp Finali",
-      "deadline": "2024-06-21",
-      "addingDate": "29.05.2024 16:03",
-      "updatedDate": "30.05.2024 20:21",
-      "updateStatus": 2
-    },
-    {
-      "id": "a55f",
-      "content": "Yeni Görev",
-      "deadline": "2024-06-07",
-      "addingDate": "30.05.2024 19:31",
-      "updatedDate": "30.05.2024 20:17",
+      "id": "73bb",
+      "content": "Sınava Çalış",
+      "deadline": "2024-07-03",
+      "addingDate": "23.07.2024 09:26",
+      "updatedDate": "23.07.2024 09:26",
       "updateStatus": 1
     },
     {
-      "id": "59af",
-      "content": "Ödevler Yapılacak",
-      "deadline": "2024-06-28",
-      "addingDate": "03.06.2024 12:21",
+      "id": "3e08",
+      "content": "Alışverişe Çık",
+      "deadline": "2024-07-24",
+      "addingDate": "23.07.2024 09:26",
       "updatedDate": "",
       "updateStatus": 0
+    },
+    {
+      "id": "2dcf",
+      "content": "Bir Kitap Oku",
+      "deadline": "2024-08-14",
+      "addingDate": "23.07.2024 09:26",
+      "updatedDate": "23.07.2024 09:27",
+      "updateStatus": 2
+    },
+    {
+      "id": "85ce",
+      "content": "React Öğren",
+      "deadline": "2024-06-28",
+      "addingDate": "23.07.2024 09:27",
+      "updatedDate": "23.07.2024 09:28",
+      "updateStatus": 2
     }
   ]
 }
